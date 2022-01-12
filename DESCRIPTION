@@ -21,3 +21,5 @@ Suggests:
     tmap,
     rmarkdown
 VignetteBuilder: knitr
+URL: https://github.com/ktemadarko/rGhanaCensus
+BugReports: https://github.com/ktemadarko/rGhanaCensus/issues
