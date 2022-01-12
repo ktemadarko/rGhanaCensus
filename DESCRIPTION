@@ -1,0 +1,14 @@
+Package: rGhanaCensus
+Title: 2021 Ghana Population and Housing Census Results as Data Frames
+Version: 0.1.0
+Authors@R: 
+    person(given="Ama", family="Owusu-Darko", 
+    email = "aowusuda@asu.edu", role = c("cre","aut"))
+Description: This package contains the 2021 Ghana Population and Housing Census Results. Users can access results as 'tidyverse' and 'sf'-Ready Data Frames.    The data in this package is scraped from PDFs released by the Ghana Statistical Service (GSS) website https://census2021.statsghana.gov.gh/.   The package currently only contains datasets from the literacy and education reports. Namely, school attendance data for respondents aged 3 years and above.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
+Depends: 
+    R (>= 2.10)
+LazyData: true
