@@ -1,0 +1,70 @@
+---
+title: "Create_interactive_map_displaying_Ghana_2019_School_Attendance_Indicators"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Create_interactive_map_displaying_Ghana_2019_School_Attendance_Indicators}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(rGhanaCensus)
+library(sf)
+library(tmap)
+library(dplyr)
+library(magrittr)
+```
+
+Call .RData file with geometry and indicator data and assign a name to the sf data frame
+
+In this example, "Ghana_edu_sf" will be the name of the sf data frame created
+
+### Example 1
+
+Create a interactive map with the package \code{tmap} that displays the regional distribution of the *Percentage of students 3 years or older who have dropped out of school.*
+
+The code `Ghana_edu_sf %>%filter(Locality=="Urban")` subsets the data frame and retains only the rows that the survey respondents came from Urban areas.
+
+`Ghana_edu_sf %>%filter(Locality=="Rural")` can be used to retain observations from rural areas.
+
+```{r load_geometry_data, echo=TRUE}
+#load geometry data (Ghana_2021_school_attendance_geometry) and convert it to sf data frame
+
+Ghana_edu_sf = get_edu_data_geom()
+```
+
+The code `tm_facets(by="Gender")` specifies facets (multiple maps) by Gender.
+
+```{r Example1}
+tmap_mode("view")
+
+Ghana_edu_sf %>%
+      dplyr::filter(Locality=="Urban") %>%
+      tm_shape()+
+      tm_polygons(id="Region", col="Percent_Dropped_out_of_School")+
+      tm_text(text="Percent_Dropped_out_of_School")+
+      tm_facets(by="Gender")
+```
+
+### Example 2
+
+Create a interactive map with the package `tmap` that displays the regional distribution of population densities of students 3 years or older who have dropped out of school.
+
+```{r Example2}
+tmap_mode("view")
+
+Ghana_edu_sf %>%
+      dplyr::filter(Locality=="Urban") %>%
+      tm_shape()+
+      tm_polygons(id="Region",col="Dropped_out_of_School", palette = "RdPu",
+                  style="kmeans", convert2density = TRUE)+ tm_facets(by="Gender")
+```
+
+The `convert2density` argument in the `tm_polygon` function calculates the population density using the raw count values of the variable `Dropped_out_of_School` where the area size is in this case approximated from the shape object.
