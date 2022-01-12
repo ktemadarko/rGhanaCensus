@@ -14,7 +14,10 @@ knitr::opts_chunk$set(
 )
 ```
 
+Load required packages
+
 ```{r setup}
+
 library(rGhanaCensus)
 library(sf)
 library(tmap)
@@ -22,27 +25,29 @@ library(dplyr)
 library(magrittr)
 ```
 
-Call .RData file with geometry and indicator data and assign a name to the sf data frame
-
-In this example, "Ghana_edu_sf" will be the name of the sf data frame created
-
 ### Example 1
 
-Create a interactive map with the package \code{tmap} that displays the regional distribution of the *Percentage of students 3 years or older who have dropped out of school.*
+Create a interactive map with the package `tmap` and data from the package `rGhanaCensus` that displays the regional distribution of the *Percentage of students 3 years or older who have dropped out of school.*
+
+Load geometry data G`hana_2021_school_attendance_geometry` from `rGhanaCensus` package.
+
+```{r load_geometry_data, echo=TRUE}
+data("Ghana_2021_school_attendance_geometry", package = "rGhanaCensus")
+```
+
+Convert it to `sf` data frame and assign a new name. In this example, "Ghana_edu_sf" will be the name of the `sf` data frame created.
+
+```{r convert_to_sf_data_frame}
+Ghana_edu_sf<- sf::st_as_sf(Ghana_2021_school_attendance_geometry)
+```
 
 The code `Ghana_edu_sf %>%filter(Locality=="Urban")` subsets the data frame and retains only the rows that the survey respondents came from Urban areas.
 
-`Ghana_edu_sf %>%filter(Locality=="Rural")` can be used to retain observations from rural areas.
-
-```{r load_geometry_data, echo=TRUE}
-#load geometry data (Ghana_2021_school_attendance_geometry) and convert it to sf data frame
-
-Ghana_edu_sf = get_edu_data_geom()
-```
-
-The code `tm_facets(by="Gender")` specifies facets (multiple maps) by Gender.
+`Ghana_edu_sf %>%filter(Locality=="Rural")` can be used to retain observations from Rural areas.
 
 ```{r Example1}
+
+#Use tmap to create interactive map
 tmap_mode("view")
 
 Ghana_edu_sf %>%
@@ -53,11 +58,21 @@ Ghana_edu_sf %>%
       tm_facets(by="Gender")
 ```
 
+The code `tm_facets(by="Gender")` specifies facets (multiple maps) by Gender.
+
 ### Example 2
 
-Create a interactive map with the package `tmap` that displays the regional distribution of population densities of students 3 years or older who have dropped out of school.
+Create a interactive map with the package `tmap` and data from the package `rGhanaCensus` that displays *the regional distribution of population densities of students 3 years or older who have dropped out of school.*
 
 ```{r Example2}
+
+#Load geometry data
+data("Ghana_2021_school_attendance_geometry", package = "rGhanaCensus")
+
+#Convert to sf data frame
+Ghana_edu_sf<- sf::st_as_sf(Ghana_2021_school_attendance_geometry)
+
+#Use tmap to create interactive map
 tmap_mode("view")
 
 Ghana_edu_sf %>%
