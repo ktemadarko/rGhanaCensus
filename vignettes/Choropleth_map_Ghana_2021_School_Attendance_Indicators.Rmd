@@ -1,8 +1,8 @@
 ---
-title: "Create_interactive_map_displaying_Ghana_2019_School_Attendance_Indicators"
+title: "Choropleth_map_Ghana_2021_School_Attendance_Indicators"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Create_interactive_map_displaying_Ghana_2019_School_Attendance_Indicators}
+  %\VignetteIndexEntry{Choropleth_map_Ghana_2021_School_Attendance_Indicators}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -29,7 +29,7 @@ library(magrittr)
 
 Create a interactive map with the package `tmap` and data from the package `rGhanaCensus` that displays the regional distribution of the *Percentage of students 3 years or older who have dropped out of school.*
 
-Load geometry data G`hana_2021_school_attendance_geometry` from `rGhanaCensus` package.
+Load geometry data `Ghana_2021_school_attendance_geometry` from `rGhanaCensus` package.
 
 ```{r load_geometry_data, echo=TRUE}
 data("Ghana_2021_school_attendance_geometry", package = "rGhanaCensus")
@@ -47,7 +47,7 @@ The code `Ghana_edu_sf %>%filter(Locality=="Urban")` subsets the data frame and 
 
 Use `tmap_mode("view")` to create interactive map. A static map is plotted here with `tmap_mode("plot")`
 
-### Map displaying Percentage of School Drop-outs from Total Respondents in each Region
+#### Map displaying Percentage of School Drop-outs from Total Respondents in each Region
 
 ```{r Example1}
 
@@ -83,9 +83,7 @@ Use `tmap_mode("view")` to create interactive map. A static map is plotted here 
 
 The `convert2density` argument in the `tm_polygon` function calculates the population density using the raw count values of the variable `Dropped_out_of_School` where the area size is in this case approximated from the shape object.
 
-
-
-### Map displaying the  Regional Population Density of School Drop-outs
+#### Map displaying the Regional Population Density of School Drop-outs
 
 ```{r plot_population_densities_of_school_drop_outs}
 
@@ -100,4 +98,3 @@ Ghana_edu_sf %>%
       tm_text(text="Region", size=0.7)+
       tm_facets(by="Gender")
 ```
-

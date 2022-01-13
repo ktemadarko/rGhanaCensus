@@ -1,0 +1,5 @@
+url: https://ktemadarko.github.io/rGhanaCensus/
+template:
+  bootstrap: 5
+  bootswatch: lux
+
