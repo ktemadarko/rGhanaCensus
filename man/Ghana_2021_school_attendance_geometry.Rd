@@ -76,6 +76,7 @@ The \code{Ghana_2021_school_attendance_geometry} dataset contains  school attend
 }
 }
 \examples{
+\dontrun{
 
 #Example
 
@@ -99,7 +100,7 @@ Ghana_edu_sf<- sf::st_as_sf(Ghana_2021_school_attendance_geometry)
 
 
 #Use tmap to create interactive map
-tmap_mode("view")
+tmap_mode("plot")
 
 Ghana_edu_sf \%>\%
                dplyr::filter(Locality=="Urban") \%>\%
@@ -107,7 +108,7 @@ Ghana_edu_sf \%>\%
                tm_polygons(id="Region", col="Percent_Dropped_out_of_School")+
                tm_text(text="Percent_Dropped_out_of_School")+
                tm_facets(by="Gender")
-
+}
 
 }
 \keyword{datasets}

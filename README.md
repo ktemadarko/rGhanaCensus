@@ -13,7 +13,7 @@ Variables and their corresponding derived percentage columns
   -Sum_of_Respondents_(3_years_and_above)
 
 
-School attendence data is scraped from Ghana Statistical Service website. Url:https://statsghana.gov.gh/
+School attendance data is scraped from Ghana Statistical Service website. Url:https://statsghana.gov.gh/
 Source: The 2021 Ghana Population and Housing Census Results Volume 3D Literacy and Education PDF Reports published on 16th December, 2021.
 
 Ghana regional administrative boundaries geometry data downloaded from Humanitarian data exchange website on 7th January, 2022}

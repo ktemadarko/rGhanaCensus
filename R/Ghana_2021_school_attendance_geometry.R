@@ -68,6 +68,7 @@
 #'
 #'
 #'@examples
+#'\dontrun{
 #'
 #'#Example
 #'
@@ -91,7 +92,7 @@
 #'
 #'
 #'#Use tmap to create interactive map
-#'tmap_mode("view")
+#'tmap_mode("plot")
 #'
 #' Ghana_edu_sf %>%
 #'                dplyr::filter(Locality=="Urban") %>%
@@ -99,7 +100,7 @@
 #'                tm_polygons(id="Region", col="Percent_Dropped_out_of_School")+
 #'                tm_text(text="Percent_Dropped_out_of_School")+
 #'                tm_facets(by="Gender")
-#'
+#'}
 #'
 
 "Ghana_2021_school_attendance_geometry"
