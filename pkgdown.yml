@@ -1,0 +1,10 @@
+pandoc: 2.7.3
+pkgdown: 2.0.1
+pkgdown_sha: ~
+articles:
+  Choropleth_map_Ghana_2021_School_Attendance_Indicators: Choropleth_map_Ghana_2021_School_Attendance_Indicators.html
+last_built: 2022-01-13T14:21Z
+urls:
+  reference: https://ktemadarko.github.io/rGhanaCensus/reference
+  article: https://ktemadarko.github.io/rGhanaCensus/articles
+
