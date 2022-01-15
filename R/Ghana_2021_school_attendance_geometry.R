@@ -68,7 +68,7 @@
 #'
 #'
 #'@examples
-#'\dontrun{
+#'
 #'
 #'#Example
 #'
@@ -90,7 +90,7 @@
 #'
 #'Ghana_edu_sf<- sf::st_as_sf(Ghana_2021_school_attendance_geometry)
 #'
-#'
+#'\dontrun{
 #'#Use tmap to create interactive map
 #'tmap_mode("plot")
 #'
