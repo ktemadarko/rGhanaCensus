@@ -19,8 +19,10 @@ Suggests:
     magrittr,
     rmarkdown,
     sf,
+    testthat (>= 3.0.0),
     tmap
 VignetteBuilder: knitr
 URL: https://github.com/ktemadarko/rGhanaCensus,
     https://ktemadarko.github.io/rGhanaCensus/
 BugReports: https://github.com/ktemadarko/rGhanaCensus/issues
+Config/testthat/edition: 3
