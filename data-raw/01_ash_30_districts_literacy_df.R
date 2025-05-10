@@ -22,7 +22,7 @@ library(DT)
 #' https://statsghana.gov.gh/gssmain/fileUpload/Demography/16%20Regions%20and%20216%20Districts.xlsx
 
 #+ warning=FALSE
-Ashanti_30_districts_literacy_percentages_df <- data.frame(
+Ashanti_30_districts_literacy_percentages <- data.frame(
   Region_Name = c("Ashanti"),
   District_Name = rep(
     c(
@@ -73,4 +73,4 @@ Ashanti_30_districts_literacy_percentages_df <- data.frame(
 #' Calculate literacy percentages
 
 devtools::session_info()
-usethis::use_data(Ashanti_30_districts_literacy_percentages_df, overwrite = TRUE)
+usethis::use_data(Ashanti_30_districts_literacy_percentages, overwrite = TRUE)
