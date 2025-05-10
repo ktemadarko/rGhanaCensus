@@ -1,6 +1,6 @@
 Package: rGhanaCensus
 Title: 2021 Ghana Population and Housing Census Results as Data Frames
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: 
     person(given="Ama", family="Owusu-Darko", 
     email = "aowusuda@asu.edu", role = c("cre","aut"))
@@ -8,7 +8,7 @@ Description: Datasets from the 2021 Ghana Population and Housing Census Results.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.2
+RoxygenNote: 7.3.2
 Maintainer: Ama Owusu-Darko <aowusuda@asu.edu>
 Depends: 
     R (>= 3.5.0)
@@ -19,8 +19,10 @@ Suggests:
     magrittr,
     rmarkdown,
     sf,
+    testthat (>= 3.0.0),
     tmap
 VignetteBuilder: knitr
 URL: https://github.com/ktemadarko/rGhanaCensus,
     https://ktemadarko.github.io/rGhanaCensus/
 BugReports: https://github.com/ktemadarko/rGhanaCensus/issues
+Config/testthat/edition: 3

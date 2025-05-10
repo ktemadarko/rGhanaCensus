@@ -9,3 +9,5 @@
 ^\.github$
 ^doc$
 ^Meta$
+^data-raw$
+^codecov\.yml$
