@@ -25,7 +25,6 @@
 #' Statistical Service downloaded on 8th May, 2025 from
 #' https://statsghana.gov.gh/gssmain/fileUpload/Demography/16%20Regions%20and%20216%20Districts.xlsx
 
-#+ warning=FALSE
 ## Using a function in this package `rGhanaCensus`
 Atwima_Mponua_2010_literacy_rates <-create_district_literacy_df(
   name_of_region = "Ashanti",
