@@ -5,10 +5,9 @@
 #' collected from the Ashanti Region during the 2010 Ghana Population and
 #' Housing Census. The results of this census prompted the Government of Ghana
 #' to subdivide the some districts thus the total number of districts in the
-#' Ashanti Region increased from 27 in 2010 to 30 in the year 2012.
-#'
-#' Note: Age range of survey respondents in this is dataset 11 years and above.
-#' See the Source section for references.
+#' Ashanti Region increased from 27 in 2010 to 30 in the year 2012.Note: Age
+#' range of survey respondents in this is dataset 11 years and above.See the
+#' Source section for references.
 #'
 #' @format A data frame with 180 rows and 10 variables:
 #' \describe{
