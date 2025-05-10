@@ -16,7 +16,7 @@ two_districts_literacy_data_example <- data.frame(
   Population = as.numeric(c(1000000, NA, NA, 200000, NA, NA))
 )
 
-# Save the modified test data
-saveRDS(test_literacy_data_example,
+# Save test data
+saveRDS(two_districts_literacy_data_example,
   file = "./tests/testthat/data-for-testing/two_districts_literacy_data_example.rds"
 )

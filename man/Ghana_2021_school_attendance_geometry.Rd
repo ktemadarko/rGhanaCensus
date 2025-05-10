@@ -45,36 +45,36 @@ dataset is 3 years and above. See the Source section for references.
 \examples{
 
 
-#Example
+# Example
 
-#Create a interactive map with the package tmap that displays the
-#regional distribution of percentage of students 3 years or older who have dropped out of school.
+# Create a interactive map with the package tmap that displays the
+# regional distribution of percentage of students 3 years or older who have dropped out of school.
 
-#Load required packages
+# Load required packages
 library(sf)
 library(tmap)
 library(dplyr)
 library(magrittr)
 
-#Load geometry data
+# Load geometry data
 data("Ghana_2021_school_attendance_geometry", package = "rGhanaCensus")
 
 
-#Convert to sf data frame and assign a name
-#In this example, "Ghana_edu_sf" will be the name of the sf data frame created.
+# Convert to sf data frame and assign a name
+# In this example, "Ghana_edu_sf" will be the name of the sf data frame created.
 
-Ghana_edu_sf<- sf::st_as_sf(Ghana_2021_school_attendance_geometry)
+Ghana_edu_sf <- sf::st_as_sf(Ghana_2021_school_attendance_geometry)
 
 \dontrun{
-#Use tmap to create interactive map
+# Use tmap to create interactive map
 tmap_mode("plot")
 
 Ghana_edu_sf \%>\%
-               dplyr::filter(Locality=="Urban") \%>\%
-               tm_shape()+
-               tm_polygons(id="Region", col="Percent_Dropped_out_of_School")+
-               tm_text(text="Percent_Dropped_out_of_School")+
-               tm_facets(by="Gender")
+  dplyr::filter(Locality == "Urban") \%>\%
+  tm_shape() +
+  tm_polygons(id = "Region", col = "Percent_Dropped_out_of_School") +
+  tm_text(text = "Percent_Dropped_out_of_School") +
+  tm_facets(by = "Gender")
 }
 
 }
