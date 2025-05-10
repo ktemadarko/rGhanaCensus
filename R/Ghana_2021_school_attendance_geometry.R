@@ -25,12 +25,13 @@
 #' \itemize{
 #'         \item{School attendance data}
 #'         \item{Scraped from Ghana Statistical Service published 2021 Ghana Population and Housing Census Results Volume 3D Literacy and Education PDF Reports}
+#'         }
 #'         \url{https://statsghana.gov.gh/gssmain/fileUpload/pressrelease/2021%20PHC%20General%20Report%20Vol%203D_Literacy%20and%20Education.pdf }
-#'
+#'\itemize{
 #'        \item{Ghana regional administrative boundaries geometry data}
 #'         \item{Downloaded from Humanitarian data exchange website on 7th January, 2022}
-#'         \url{https://data.humdata.org/dataset/ghana-administrative-boundaries}
 #'}
+#'         \url{https://data.humdata.org/dataset/ghana-administrative-boundaries}
 #'
 #'@examples
 #'

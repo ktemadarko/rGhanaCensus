@@ -20,7 +20,7 @@ A data frame with 64 rows and 10 variables:
 }
 }
 \source{
-\describe{
+\itemize{
 \item{School attendance data}
 \item{Scraped from Ghana Statistical Service published 2021 Ghana Population and Housing Census Results Volume 3D Literacy and Education PDF Reports}
 
