@@ -1,4 +1,4 @@
-#' Calculate Literacy Percentages and Total Percentage
+#' Calculate Literacy Percentages
 #'
 #' This function takes a data frame with columns for Literate Population and
 #' Not Literate Population and calculates the Literate Percentage, Not Literate
