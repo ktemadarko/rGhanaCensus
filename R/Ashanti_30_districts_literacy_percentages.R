@@ -21,10 +21,10 @@
 #'    \item{Not_Literate_Population}{An integer representing the number of not literate individuals in the district and gender group.}
 #'    \item{Population}{An integer representing the total population in the district and gender group.}
 #'    \item{Total_Percentage}{A numeric value representing the sum of the literate and not literate percentages for the district and gender group.}
-#' }
+#'    }
 #'
 #' @source
-#' \describe{
+#' \itemize{
 #'         \item{Reference that number of districts in the Ashanti Region increased}
 #'         \item{The 2010 Population and Housing Census Regional Analytical Report for the Ashanti Region published by the Ghana Statistical Service published in 2013}
 #' }

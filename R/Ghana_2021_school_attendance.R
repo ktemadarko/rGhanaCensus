@@ -22,13 +22,15 @@
 #'
 #' @source
 #' \itemize{
-#'         \item{School attendance data}{Scraped from Ghana Statistical Service published 2021 Ghana Population and Housing Census Results Volume 3D Literacy and Education PDF Reports}
-#'
+#'         \item{School attendance data}
+#'         \item{Scraped from Ghana Statistical Service published 2021 Ghana Population and Housing Census Results Volume 3D Literacy and Education PDF Reports}
+#'         }
 #'         \url{https://statsghana.gov.gh/gssmain/fileUpload/pressrelease/2021%20PHC%20General%20Report%20Vol%203D_Literacy%20and%20Education.pdf }
-#'
-#'        \item{Ghana regional administrative boundaries geometry data}{Downloaded from Humanitarian data exchange website on 7th January, 2022}
-#'         \url{https://data.humdata.org/dataset/ghana-administrative-boundaries}
+#'\itemize{
+#'        \item{Ghana regional administrative boundaries geometry data}
+#'         \item{Downloaded from Humanitarian data exchange website on 7th January, 2022}
 #'}
+#'         \url{https://data.humdata.org/dataset/ghana-administrative-boundaries}
 #'
 
 "Ghana_2021_school_attendance"

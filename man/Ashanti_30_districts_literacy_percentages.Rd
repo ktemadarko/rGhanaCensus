@@ -20,7 +20,7 @@ A data frame with 180 rows and 10 variables:
 }
 }
 \source{
-\describe{
+\itemize{
 \item{Reference that number of districts in the Ashanti Region increased}
 \item{The 2010 Population and Housing Census Regional Analytical Report for the Ashanti Region published by the Ghana Statistical Service published in 2013}
 }
