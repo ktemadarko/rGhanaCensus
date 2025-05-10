@@ -51,6 +51,7 @@ A data frame with 64 rows and 10 variables:
 \item{A numeric column with the raw sum values in each row.}
 \item{That is sum of (Currently_Attending_School, Never_Attended_School, Dropped_out_of_School) in each row}
 }
+\item{geometry}{geospatial coordinates}
 }
 }
 \source{

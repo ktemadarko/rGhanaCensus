@@ -10,6 +10,9 @@
 #'         \item{Region_Name}{A factor with 1 level which is Ashanti}
 #'         \item{District_Name}{A factor with 30 levels with the names of the districts in Ashanti region}
 #'         \item{Gender}{A factor with 3 levels, Total(Sum for all genders), Male and Female}
+#'        Census_Year District_Name Gender Literate_Percentage
+#'Literate_Population Not_Literate_Percentage
+#'Not_Literate_Population Population Region_Name Total_Percentage
 #' }
 #'
 #' @source
