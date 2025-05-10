@@ -7,52 +7,18 @@
 #
 #' @format A data frame with 64 rows and 10 variables:
 #' \describe{
-#'         \item{Region}
-#'         \itemize{
-#'                   \item{A factor with 16 levels with the names of the regions in Ghana}
-#'         }
-#'         \item{Gender}
-#'         \itemize{
-#'                   \item{A factor with 2 levels}
-#'              }
-#'         \item{Locality}
-#'         \itemize{
-#'                \item{A factor with 2 levels describing with the respondents surveyed lived in an urban or rural area}
-#'                }
-#'         \item{Currently_Attending_School}
-#'         \itemize{
-#'                  \item{ numeric column with the raw count values of survey respondents aged 3 years and above currently attending school}
-#'              }
-#'         \item{Percent_Currently_Attending_School}
-#'         \itemize{
-#'                  \item{A numeric column with the derived percentage of}
-#'                  \item{((Currently_Attending_School)/Sum_of_Respondents_(3_years_and_above))*100 to two decimal places}
-#'                  }
-#'         \item{Never_Attended_School}
-#'         \itemize{
-#'              \item{-A numeric column with the raw count values of survey respondents aged 3 years and above who have never attended school}
-#'               }
-#'         \item{Percent_Never_Attended_School}
-#'         \itemize{
-#'                  \item{A numeric column with the derived percentage of }
-#'                  \item{((Never_Attended_School)/Sum_of_Respondents_(3_years_and_above))*100 to two decimal places}
-#'                  }
-#'         \item{Dropped_out_of_School}
-#'         \itemize{
-#'                    \item{A numeric column with the raw count values of survey respondents aged 3 years and above who were in school but dropped out}
-#'                 }
-#'         \item{Percent_Dropped_out_of_School}
-#'         \itemize{
-#'                  \item{A numeric column with the derived percentage of }
-#'                  \item{((Dropped_out_of_School)/Sum_of_Respondents_(3_years_and_above))*100 to two decimal places}
-#'                   }
-#'         \item{Sum_of_Respondents_(3_years_and_above)}
-#'         \itemize{
-#'                  \item{A numeric column with the raw sum values in each row.}
-#'                  \item{That is sum of (Currently_Attending_School, Never_Attended_School, Dropped_out_of_School) in each row}
-#'                 }
-#'         \item{geometry}{geospatial coordinates}
-#'  }
+#'    \item{Region}{A factor with 16 levels representing the regions in Ghana.}
+#'    \item{Gender}{A factor with 2 levels.}
+#'    \item{Locality}{A factor with 2 levels indicating if respondents lived in an urban or rural area.}
+#'    \item{Currently_Attending_School}{Numeric: The raw count of survey respondents aged 3 years and above currently attending school.}
+#'    \item{Percent_Currently_Attending_School}{Numeric: The percentage of respondents currently attending school, calculated as ((Currently_Attending_School) / Sum_of_Respondents_(3_years_and_above)) * 100 (rounded to two decimal places).}
+#'    \item{Never_Attended_School}{Numeric: The raw count of survey respondents aged 3 years and above who have never attended school.}
+#'    \item{Percent_Never_Attended_School}{Numeric: The percentage of respondents who have never attended school, calculated as ((Never_Attended_School) / Sum_of_Respondents_(3_years_and_above)) * 100 (rounded to two decimal places).}
+#'    \item{Dropped_out_of_School}{Numeric: The raw count of survey respondents aged 3 years and above who were in school but dropped out.}
+#'    \item{Percent_Dropped_out_of_School}{Numeric: The percentage of respondents who dropped out of school, calculated as ((Dropped_out_of_School) / Sum_of_Respondents_(3_years_and_above)) * 100 (rounded to two decimal places).}
+#'    \item{Sum_of_Respondents_(3_years_and_above)}{Numeric: The sum of (Currently_Attending_School, Never_Attended_School, Dropped_out_of_School) in each row.}
+#'    \item{geometry}{Geospatial coordinates.}
+#' }
 #'
 #' @source
 #' \itemize{

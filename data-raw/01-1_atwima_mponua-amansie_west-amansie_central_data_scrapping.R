@@ -9,6 +9,9 @@
 
 #' Cleaning history
 #'
+#' This script is for 3 districts
+#' - Atwima_Mponua
+#' -
 #' * 10th May 2025: I created the structure of the data set, it would be 180 rows
 #' with nine columns
 #' * 10th May 2025: I am going to manually populate the literacy data from the

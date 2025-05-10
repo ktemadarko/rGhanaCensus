@@ -7,12 +7,16 @@
 #
 #' @format A data frame with 180 rows and 10 variables:
 #' \describe{
-#'         \item{Region_Name}{A factor with 1 level which is Ashanti}
-#'         \item{District_Name}{A factor with 30 levels with the names of the districts in Ashanti region}
-#'         \item{Gender}{A factor with 3 levels, Total(Sum for all genders), Male and Female}
-#'        Census_Year District_Name Gender Literate_Percentage
-#'Literate_Population Not_Literate_Percentage
-#'Not_Literate_Population Population Region_Name Total_Percentage
+#'    \item{Region_Name}{A factor with 1 level which is Ashanti.}
+#'    \item{District_Name}{A factor with 30 levels with the names of the districts in the Ashanti region.}
+#'    \item{Gender}{A factor with 3 levels: Total (sum for all genders), Male, and Female.}
+#'    \item{Census_Year}{A factor with 2 levels, indicating the census year 2010 or 2021.}
+#'    \item{Literate_Percentage}{A numeric value representing the percentage of the literate population in the district and gender group.}
+#'    \item{Literate_Population}{An integer representing the number of literate individuals in the district and gender group.}
+#'    \item{Not_Literate_Percentage}{A numeric value representing the percentage of the not literate population in the district and gender group.}
+#'    \item{Not_Literate_Population}{An integer representing the number of not literate individuals in the district and gender group.}
+#'    \item{Population}{An integer representing the total population in the district and gender group.}
+#'    \item{Total_Percentage}{A numeric value representing the sum of the literate and not literate percentages for the district and gender group.}
 #' }
 #'
 #' @source
