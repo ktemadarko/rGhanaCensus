@@ -20,6 +20,7 @@
 #' @examples
 #' # Create literacy data for the Kumasi Metropolitan district
 #' kumasi_literacy <- create_district_literacy_df(
+#'   name_of_region = "Ashanti",
 #'   name_of_district = "Kumasi Metropolitan",
 #'   census_year = 2010,
 #'   total_literate_population = 800000,
@@ -29,7 +30,8 @@
 #' )
 #'
 #' @export
-create_district_literacy_df <- function(name_of_district,
+create_district_literacy_df <- function(name_of_region,
+                                        name_of_district,
                                         census_year,
                                         total_literate_population,
                                         total_not_literate_population,

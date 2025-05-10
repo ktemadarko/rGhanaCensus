@@ -22,8 +22,6 @@
 #'   * Total literacy percentage
 #'   * Literacy percentage disaggregated by gender
 
-
-
 # load-packages----
 library(DT)
 
@@ -32,3 +30,12 @@ library(DT)
 #' https://statsghana.gov.gh/gssmain/fileUpload/Demography/16%20Regions%20and%20216%20Districts.xlsx
 
 #+ warning=FALSE
+create_district_literacy_df(
+  name_of_region = "Ashanti",
+  name_of_district = "Atwima Mponua",
+  census_year = 2010,
+  total_literate_population = 56068,
+  total_not_literate_population = 23306,
+  number_literate_males = 31502,
+  number_literate_females = 24566
+)
