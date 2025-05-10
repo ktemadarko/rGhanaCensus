@@ -30,4 +30,4 @@
 #'
 
 
-"Ashanti_30_districts_literacy_percentages"
+#"Ashanti_30_districts_literacy_percentages"
