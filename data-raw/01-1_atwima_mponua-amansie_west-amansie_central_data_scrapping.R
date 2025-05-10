@@ -7,15 +7,22 @@
 #'     keep_md: TRUE
 #' ---
 
-#' Cleaning history
+#' **Cleaning history**
 #'
-#' This script is for 3 districts
-#' - Atwima_Mponua
-#' -
-#' * 10th May 2025: I created the structure of the data set, it would be 180 rows
-#' with nine columns
-#' * 10th May 2025: I am going to manually populate the literacy data from the
-#' district analytical reports created by the Ghana Statistical Service.
+#' This script is to scrape literacy data for the following 3 districts
+#' * Atwima Mponua
+#' * Amansie West
+#' * Amansie Central
+#'
+#' **Data Acquisition and Extraction**
+#' * 10th May 2025
+#' The district-level analytical reports, available in PDF format for each of the three districts, were the source of literacy data.
+#' The literacy section of these reports was extracted and saved as individual PDF files.
+#' Subsequently, Gemini was employed to programmatically extract the following literacy metrics for each district:
+#'   * Total literacy percentage
+#'   * Literacy percentage disaggregated by gender
+
+
 
 # load-packages----
 library(DT)

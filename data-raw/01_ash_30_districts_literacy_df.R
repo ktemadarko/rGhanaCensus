@@ -61,12 +61,12 @@ Ashanti_30_districts_literacy_percentages <- data.frame(
   ),
   Census_Year = rep(c(2010, 2021), each = 3, times = 30),
   Gender = rep(c("Total", "Male", "Female"), times = 60),
-  Population = c(""),
-  Literate_Population = c(""),
-  Not_Literate_Population = c(""),
-  Literate_Percentage = c(""),
-  Not_Literate_Percentage = c(""),
-  Total_Percentage = c("")
+  Population = as.numeric(NA),
+  Literate_Population = as.numeric(NA),
+  Not_Literate_Population = as.numeric(NA),
+  Literate_Percentage = as.numeric(NA),
+  Not_Literate_Percentage = as.numeric(NA),
+  Total_Percentage = as.numeric(NA)
 )
 
 
