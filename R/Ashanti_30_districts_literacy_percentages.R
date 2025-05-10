@@ -6,19 +6,10 @@
 #'       }
 #
 #' @format A data frame with 180 rows and 10 variables:
-#' \itemize{
-#'         \item{Region_Name}
-#'         \itemize{
-#'                   \item{A factor with 1 level which is Ashanti}
-#'                 }
-#'         \item{District_Name}
-#'         \itemize{
-#'                   \item{A factor with 30 levels with the names of the districts in Ashanti region}
-#'         }
-#'         \item{Gender}
-#'         \itemize{
-#'                   \item{A factor with 3 levels, Total(Sum for all genders), Male and Female}
-#'              }
+#' \describe{
+#'         \item{Region_Name}{A factor with 1 level which is Ashanti}
+#'         \item{District_Name}{A factor with 30 levels with the names of the districts in Ashanti region}
+#'         \item{Gender}{A factor with 3 levels, Total(Sum for all genders), Male and Female}
 #' }
 #'
 #' @source

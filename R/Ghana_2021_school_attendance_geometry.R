@@ -6,7 +6,7 @@
 #'       }
 #
 #' @format A data frame with 64 rows and 10 variables:
-#' \itemize{
+#' \descibe{
 #'         \item{Region}
 #'         \itemize{
 #'                   \item{A factor with 16 levels with the names of the regions in Ghana}
