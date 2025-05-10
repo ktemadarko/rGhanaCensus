@@ -1,4 +1,5 @@
 test_that("calculate_literacy_percentages works correctly", {
+
   literacy_data <- readRDS(test_path("data-for-testing", "test_literacy_data_example.rds"))
   result_df <- calculate_literacy_percentages(literacy_data)
 
