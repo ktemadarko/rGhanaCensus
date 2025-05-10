@@ -26,9 +26,9 @@ literacy_data <- data.frame(
   Literate_Population = c(150, 200, 180),
   Not_Literate_Population = c(50, 100, 20)
 )
-
+literacy_data$Population = literacy_data$Literate_Population +
+literacy_data$Not_Literate_Population
 # Calculate literacy percentages
 result_df <- calculate_literacy_percentages(literacy_data)
-print(result_df)
 
 }
