@@ -1,4 +1,4 @@
-## code to prepare `ash_30_districts_literacy_df` dataset goes here
+## code to prepare `Ashanti_30_districts_literacy_percentages_df` dataset goes here
 
 #' ---
 #' date: "`r format(Sys.Date())`"
@@ -10,7 +10,7 @@
 #' Cleaning history
 #'
 #' * 9th May 2025: I created the structure of the data set, it would be 180 rows
-#' with nine columns
+#' with ten columns
 #' * 10th May 2025: I am going to manually populate the literacy data from the
 #' district analytical reports created by the Ghana Statistical Service.
 
