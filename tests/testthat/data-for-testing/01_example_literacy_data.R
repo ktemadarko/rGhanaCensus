@@ -4,6 +4,5 @@ test_literacy_data_example <- data.frame(
 )
 
 saveRDS(test_literacy_data_example,
-     file = "./tests/testthat/data-for-testing/test_literacy_data_example.rds")
-
-
+  file = "./tests/testthat/data-for-testing/test_literacy_data_example.rds"
+)

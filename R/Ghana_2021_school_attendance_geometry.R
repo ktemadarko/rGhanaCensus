@@ -27,46 +27,45 @@
 #'         \item{Scraped from Ghana Statistical Service published 2021 Ghana Population and Housing Census Results Volume 3D Literacy and Education PDF Reports}
 #'         }
 #'         \url{https://statsghana.gov.gh/gssmain/fileUpload/pressrelease/2021%20PHC%20General%20Report%20Vol%203D_Literacy%20and%20Education.pdf }
-#'\itemize{
+#' \itemize{
 #'        \item{Ghana regional administrative boundaries geometry data}
 #'         \item{Downloaded from Humanitarian data exchange website on 7th January, 2022}
-#'}
+#' }
 #'         \url{https://data.humdata.org/dataset/ghana-administrative-boundaries}
 #'
-#'@examples
+#' @examples
 #'
 #'
-#'#Example
+#' # Example
 #'
-#' #Create a interactive map with the package tmap that displays the
-#' #regional distribution of percentage of students 3 years or older who have dropped out of school.
+#' # Create a interactive map with the package tmap that displays the
+#' # regional distribution of percentage of students 3 years or older who have dropped out of school.
 #'
-#'#Load required packages
+#' # Load required packages
 #' library(sf)
 #' library(tmap)
 #' library(dplyr)
 #' library(magrittr)
 #'
-#'#Load geometry data
-#'data("Ghana_2021_school_attendance_geometry", package = "rGhanaCensus")
+#' # Load geometry data
+#' data("Ghana_2021_school_attendance_geometry", package = "rGhanaCensus")
 #'
 #'
-#'#Convert to sf data frame and assign a name
-#'#In this example, "Ghana_edu_sf" will be the name of the sf data frame created.
+#' # Convert to sf data frame and assign a name
+#' # In this example, "Ghana_edu_sf" will be the name of the sf data frame created.
 #'
-#'Ghana_edu_sf<- sf::st_as_sf(Ghana_2021_school_attendance_geometry)
+#' Ghana_edu_sf <- sf::st_as_sf(Ghana_2021_school_attendance_geometry)
 #'
-#'\dontrun{
-#'#Use tmap to create interactive map
-#'tmap_mode("plot")
+#' \dontrun{
+#' # Use tmap to create interactive map
+#' tmap_mode("plot")
 #'
 #' Ghana_edu_sf %>%
-#'                dplyr::filter(Locality=="Urban") %>%
-#'                tm_shape()+
-#'                tm_polygons(id="Region", col="Percent_Dropped_out_of_School")+
-#'                tm_text(text="Percent_Dropped_out_of_School")+
-#'                tm_facets(by="Gender")
-#'}
+#'   dplyr::filter(Locality == "Urban") %>%
+#'   tm_shape() +
+#'   tm_polygons(id = "Region", col = "Percent_Dropped_out_of_School") +
+#'   tm_text(text = "Percent_Dropped_out_of_School") +
+#'   tm_facets(by = "Gender")
+#' }
 #'
-
 "Ghana_2021_school_attendance_geometry"
