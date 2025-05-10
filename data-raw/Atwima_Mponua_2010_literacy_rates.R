@@ -11,8 +11,6 @@
 #'
 #' This script is to scrape literacy data for the following 3 districts
 #' * Atwima Mponua
-#' * Amansie West
-#' * Amansie Central
 #'
 #' **Data Acquisition and Extraction**
 #' * 10th May 2025
@@ -22,15 +20,14 @@
 #'   * Total literacy percentage
 #'   * Literacy percentage disaggregated by gender
 
-# load-packages----
-library(DT)
 
 #' Manually Extract the names of the districts from excel file created by Ghana
 #' Statistical Service downloaded on 8th May, 2025 from
 #' https://statsghana.gov.gh/gssmain/fileUpload/Demography/16%20Regions%20and%20216%20Districts.xlsx
 
 #+ warning=FALSE
-create_district_literacy_df(
+## Using a function in this package `rGhanaCensus`
+Atwima_Mponua_2010_literacy_rates <-create_district_literacy_df(
   name_of_region = "Ashanti",
   name_of_district = "Atwima Mponua",
   census_year = 2010,
@@ -39,3 +36,8 @@ create_district_literacy_df(
   number_literate_males = 31502,
   number_literate_females = 24566
 )
+
+
+usethis::use_data(Atwima_Mponua_2010_literacy_rates, overwrite = TRUE)
+
+devtools::session_info()

@@ -3,6 +3,7 @@ test_that("create_district_literacy_df works correctly with test data", {
 
   # Test for Kumasi Metropolitan
   kumasi_data <- create_district_literacy_df(
+    name_of_region = "Ashanti",
     name_of_district = "Kumasi Metropolitan",
     census_year = 2010,
     total_literate_population = 800000,

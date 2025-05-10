@@ -5,6 +5,7 @@
 \title{Create a data frame for district literacy information.}
 \usage{
 create_district_literacy_df(
+  name_of_region,
   name_of_district,
   census_year,
   total_literate_population,
@@ -41,6 +42,7 @@ It includes total, male, and female literate populations.
 \examples{
 # Create literacy data for the Kumasi Metropolitan district
 kumasi_literacy <- create_district_literacy_df(
+  name_of_region = "Ashanti",
   name_of_district = "Kumasi Metropolitan",
   census_year = 2010,
   total_literate_population = 800000,
