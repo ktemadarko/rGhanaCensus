@@ -1,4 +1,14 @@
-codecov:
-  ci:
-    - github
-    - github-actions
+comment: false
+
+coverage:
+  status:
+    project:
+      default:
+        target: auto
+        threshold: 1%
+        informational: true
+    patch:
+      default:
+        target: auto
+        threshold: 1%
+        informational: true
