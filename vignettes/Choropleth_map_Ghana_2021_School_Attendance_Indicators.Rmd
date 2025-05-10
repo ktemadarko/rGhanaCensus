@@ -52,7 +52,7 @@ Use `tmap_mode("view")` to create interactive map. A static map is plotted here 
 ```{r Example1}
 
 #Use tmap to create interactive map
-tmap_mode("plot")
+tmap::tmap_mode("plot")
 
 Ghana_edu_sf %>%
       dplyr::filter(Locality=="Urban") %>%

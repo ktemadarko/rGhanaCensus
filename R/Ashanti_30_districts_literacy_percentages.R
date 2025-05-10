@@ -5,7 +5,7 @@
 #'                    \item{ Details} {-Age range of survey respondents in this data set 3 years and above.}
 #'       }
 #
-#' @format A data frame with 180 rows and 9 variables:
+#' @format A data frame with 180 rows and 10 variables:
 #' \itemize{
 #'         \item{Region_Name}
 #'         \itemize{
@@ -30,4 +30,4 @@
 #'
 
 
-#"Ashanti_30_districts_literacy_percentages"
+"Ashanti_30_districts_literacy_percentages"

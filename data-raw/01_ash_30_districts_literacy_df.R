@@ -22,7 +22,8 @@ library(DT)
 #' https://statsghana.gov.gh/gssmain/fileUpload/Demography/16%20Regions%20and%20216%20Districts.xlsx
 
 #+ warning=FALSE
-ash_30_districts_literacy_df <- data.frame(
+Ashanti_30_districts_literacy_percentages_df <- data.frame(
+  Region_Name = c("Ashanti"),
   District_Name = rep(
     c(
       "Atwima Mponua",
@@ -70,42 +71,6 @@ ash_30_districts_literacy_df <- data.frame(
 
 
 #' Calculate literacy percentages
-pop_raw <- pop_xls %>%
-  select(country = Area, year = Year, pop = Population)
-pop_raw %>% str()
-
-#' Focus on the years where most of the data is.
-summary(pop_raw$year)
-#' AHA! In 2010, this also included 2448 NA's. 20455 + 2448 = 22903. Mystery of
-#' the rows solved.
-
-year_freq <- pop_raw %>%
-  count(year)
-
-(p <- ggplot(year_freq, aes(x = year, y = n)) +
-    geom_bar(stat = "identity"))
-p + xlim(c(1800, 2010))
-p + xlim(c(1945, 1955)) # huge increase at 1950
-p + xlim(c(2000, 2015)) # huge drop at 2009 (data contains some extrapolation)
-
-#' Keep data from 1950 to 2008
-year_min <- 1950
-year_max <- 2008
-pop_raw <- pop_raw %>%
-  filter(year %>% between(year_min, year_max))
-str(pop_raw)
-
-#' I am the voice from the future: look at India!
-pop_raw %>%
-  filter(country == "India")
-#' These doubles create problems later. GET RID OF THEM NOW.
-
-#' Force the population to be integer.
-pop_raw <- pop_raw %>%
-  mutate(pop = pop %>% as.integer())
-
-#' Save for now
-write_tsv(pop_raw, "01_pop.tsv")
 
 devtools::session_info()
-usethis::use_data(ash_30_districts_literacy_df, overwrite = TRUE)
+usethis::use_data(Ashanti_30_districts_literacy_percentages_df, overwrite = TRUE)
