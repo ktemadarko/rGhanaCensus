@@ -13,11 +13,19 @@
 #'
 #' **Data Acquisition and Extraction**
 #' * 10th May 2025
-#' The district-level analytical reports, available in PDF format for each of the three districts, were the source of literacy data.
-#' The literacy section of these reports was extracted and saved as individual PDF files.
-#' Subsequently, Gemini was employed to programmatically extract the following literacy metrics for each district:
+#' The district-level analytical reports, available in PDF format for each of
+#' the three districts, were the source of literacy data.
+#' The literacy section of these reports was extracted and saved as individual
+#' PDF files.
+#' Subsequently, Gemini was employed to programmatically extract the following
+#' literacy metrics for each district:
 #'   * Total literacy percentage
 #'   * Literacy percentage disaggregated by gender
+#'
+#' * 11th May 2025
+#' Discovered wayback machine link https://web.archive.org/ is an initiative of
+#' the Internet Archive that captures a web page as it appears now for use as a
+#' trusted citation in the future.
 
 
 #' Manually Extract the names of the districts from excel file created by Ghana
