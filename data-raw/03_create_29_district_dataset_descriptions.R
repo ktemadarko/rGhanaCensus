@@ -34,7 +34,7 @@ districts <- c(
 # Loop through each district
 for (district in districts) {
   # Construct the file name
-  file_name <- paste0("data", gsub(" ", "_", district), "_2010_literacy_rates.R")
+  file_name <- paste0("data_", gsub(" ", "_", district), "_2010_literacy_rates.R")
   file_path <- file.path("R", file_name)
 
   # Construct the documentation content, replacing "name_of_district_here"
