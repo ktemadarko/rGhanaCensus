@@ -35,6 +35,7 @@ districts <- c(
 for (district in districts) {
   # Construct the file name
   file_name <- paste0("data", gsub(" ", "_", district), "_2010_literacy_rates.R")
+  file_path <- file.path("R", file_name)
 
   # Construct the documentation content, replacing "name_of_district_here"
   documentation <- paste0(
@@ -71,9 +72,9 @@ for (district in districts) {
 
   # Use usethis::use_r to create the file and write the content
   usethis::use_r(name = file_name)
-  writeLines(documentation, con = file_name)
+  writeLines(documentation, con = file_path)
 
-  cat(paste0("Created file: ", file_name, "\n"))
+  cat(paste0("Created file: ", file_path, "\n"))
 }
 
-cat("Successfully created R script files for all 29 districts in the 'data' folder.\n")
+cat("Successfully created R script files for all 29 districts in the 'R' folder.\n")
