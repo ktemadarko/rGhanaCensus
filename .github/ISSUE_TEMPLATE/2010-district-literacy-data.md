@@ -1,9 +1,9 @@
 ---
-name: District Literacy data
+name: 2010 District Literacy data
 about: Checklist when creating a new district literacy dataset from scraped census
   data
 title: New District Literacy Dataset
-labels: literacy dataset
+labels: 2010, literacy dataset
 assignees: ktemadarko
 
 ---
