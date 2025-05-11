@@ -1,8 +1,8 @@
 ---
-name: District Literacy data
-about: Checklist when creating a new district literacy dataset from scraped census
+name: '2010 District Literacy data '
+about: Checklist when creating a new district literacy dataset from scraped 2010 census
   data
-title: New District Literacy Dataset
+title: District Literacy Dataset (2010 census)
 labels: literacy dataset
 assignees: ktemadarko
 
@@ -11,6 +11,8 @@ assignees: ktemadarko
 **Steps to complete literacy data for one district**
 
 - [ ] **Atwima Mponua**
+
+   - [ ] **Download the source pdf to the folder 30_ash_districts/2010/**
 
    - [ ] **Scrape and paste the literacy data in to district file in the folder data-raw/**
         - [ ] Run the district file in the folder data-raw/ to create the dataset.
