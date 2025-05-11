@@ -70,7 +70,7 @@ for (district in districts) {
   )
 
   # Use usethis::use_r to create the file and write the content
-  usethis::use_r(name = gsub(" ", "_", district), package = FALSE, open = FALSE, rstudio = FALSE)
+  usethis::use_r(name = gsub(" ", "_", district))
   writeLines(documentation, con = file_name)
 
   cat(paste0("Created file: ", file_name, "\n"))
