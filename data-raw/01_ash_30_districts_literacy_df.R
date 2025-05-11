@@ -14,8 +14,6 @@
 #' * 10th May 2025: I am going to manually populate the literacy data from the
 #' district analytical reports created by the Ghana Statistical Service.
 
-# load-packages----
-library(DT)
 
 #' Manually Extract the names of the districts from excel file created by Ghana
 #' Statistical Service downloaded on 8th May, 2025 from

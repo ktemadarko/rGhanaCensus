@@ -20,7 +20,7 @@
 
 districts <- c(
   "Adansi North", "Bekwai Municipal", "Bosome Freho", "Asante Akim South",
-  "Asante Akim Central Municipal", "Ejisu Juaben Municipal", "Bosumtwe",
+  "Asante Akim Central Municipal", "Ejisu Juaben Municipal", "Bosomtwe",
   "Atwima Kwanwoma", "Kumasi Metropolis", "Atwima Nwabiagya", "Ahafo Ano South",
   "Ahafo Ano North", "Offinso Municipal", "Afigya Kwabre", "Kwabre East",
   "Sekyere South", "Mampong Municipal", "Sekyere East", "Sekyere Kumewu",
@@ -58,7 +58,7 @@ for (district in districts) {
     "#'     keep_md: TRUE\n",
     "#' ---\n",
     "## Using a function in this package `rGhanaCensus`\n",
-    gsub(" ", "_", district), "_2010_literacy_rates <- create_district_literacy_df(\n",
+    gsub(" ", "_", district), "_2010_literacy_rates <- new_literacy_data(\n",
     "  name_of_region = \"", region_name, "\",\n",
     "  name_of_district = \"", district, "\",\n",
     "  census_year = ", census_year, ",\n",

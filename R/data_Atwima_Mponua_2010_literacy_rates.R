@@ -1,20 +1,16 @@
-#' @title District level Literacy estimates for Ashanti Region (2010 census)
+#' @title Atwima Mponua District level Literacy estimates from the 2010 census
 #'
-#' @description The `Ashanti_30_districts_literacy_percentages` dataset contains
+#' @description The `Atwima_Mponua_2010_literacy_rates` dataset contains
 #' literacy percentages for respondents aged 11 years and above. This data was
-#' collected from the Ashanti Region during the 2010 Ghana Population and
-#' Housing Census. The results of this census prompted the Government of Ghana
-#' to subdivide the some districts thus the total number of districts in the
-#' Ashanti Region increased from 27 in 2010 to 30 in the year 2012.Note: Age
-#' range of survey respondents in this is dataset 11 years and above.See the
-#' Source section for references.
+#' collected from the Atwima Mponua district during the 2010 Ghana Population and
+#' Housing Census.
 #'
-#' @format A data frame with 180 rows and 11 variables:
+#' @format A data frame with 3 rows and 11 variables:
 #' \describe{
 #'    \item{Region_Name}{A factor with 1 level which is Ashanti.}
-#'    \item{District_Name}{A factor with 30 levels with the names of the districts in the Ashanti region.}
+#'    \item{District_Name}{A factor with 1 level which is Atwima Mponua. }
 #'    \item{Gender}{A factor with 3 levels: Total (sum for all genders), Male, and Female.}
-#'    \item{Census_Year}{A factor with 2 levels, indicating the census year 2010 or 2021.}
+#'    \item{Census_Year}{A factor with 2 levels, indicating the census year 2010.}
 #'    \item{Literate_Percentage}{A numeric value representing the percentage of the literate population in the district and gender group.}
 #'    \item{Literate_Population}{An integer representing the number of literate individuals in the district and gender group.}
 #'    \item{Not_Literate_Percentage}{A numeric value representing the percentage of the not literate population in the district and gender group.}
@@ -26,11 +22,10 @@
 #'
 #' @source
 #' \itemize{
-#'         \item{Reference that number of districts in the Ashanti Region increased}
-#'         \item{The 2010 Population and Housing Census Regional Analytical Report for the Ashanti Region published by the Ghana Statistical Service published in 2013}
+#'         \item{The 2010 Population and Housing Census District Analytical Report for the Atwima Mponua District published by the Ghana Statistical Service in 2014}
 #' }
-#'         \url{https://www2.statsghana.gov.gh/docfiles/2010phc/2010_PHC_Regional_Analytical_Reports_Ashanti_Region.pdf }
+#'         \url{https://www2.statsghana.gov.gh/docfiles/2010_District_Report/Ashanti/ATWIMA%20MPONUA.pdf}
 #'
 
 
-"Ashanti_30_districts_literacy_percentages"
+"Atwima_Mponua_2010_literacy_rates"

@@ -11,8 +11,12 @@
 #' * 11th May, 2025
 #' This script is to scrape literacy data for the Bosomtwe district
 #'
+#' * 11th May, 2025 evening
+#' Replaced the create_district_literacy_df with the function new_literacy_data
+#' which creates a dataframe which is a s3 object
+
 ## Using a function in this package `rGhanaCensus`
-Bosomtwe_2010_literacy_rates <- create_district_literacy_df(
+Bosomtwe_2010_literacy_rates <- new_literacy_data(
   name_of_region = "Ashanti",
   name_of_district = "Bosomtwe",
   census_year = 2010,

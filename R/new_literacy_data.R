@@ -1,7 +1,7 @@
-#' Literacy Dataframe Class Constructor
+#' Literacy Data Class Constructor
 #'
-#' Creates an S3 object of class `literacy_dataframe` containing district
-#' literacy information.
+#' Creates an S3 object of class "literacy_dataframe" containing district literacy
+#' information.
 #'
 #' @param name_of_district A character string specifying the name of the district.
 #' @param census_year Year in which the census data was collected.
@@ -47,21 +47,21 @@ new_literacy_data <- function(name_of_region = "Ashanti",
                               number_not_literate_females) {
 
   # Create an assertion collection
-  assertions <- assertions::makeAssertCollection()
+  assertions <- checkmate::makeAssertCollection()
 
   # Input validation using assert_ functions
-  assertions::assert_character(name_of_district, len = 1, add = assertions)
-  assertions::assert_number(census_year, len = 1, add = assertions)
-  assertions::assert_number(total_literate_population, len = 1, add = assertions)
-  assertions::assert_number(total_not_literate_population, len = 1, add = assertions)
-  assertions::assert_number(number_literate_males, len = 1, add = assertions)
-  assertions::assert_number(number_literate_females, len = 1, add = assertions)
-  assertions::assert_number(number_not_literate_males, len = 1, add = assertions)
-  assertions::assert_number(number_not_literate_females, len = 1, add = assertions)
-  assertions::assert_character(name_of_region, len = 1, add = assertions)
+  checkmate::assert_character(name_of_district,  add = assertions)
+  checkmate::assert_number(census_year,  add = assertions)
+  checkmate::assert_number(total_literate_population,  add = assertions)
+  checkmate::assert_number(total_not_literate_population,  add = assertions)
+  checkmate::assert_number(number_literate_males,  add = assertions)
+  checkmate::assert_number(number_literate_females,  add = assertions)
+  checkmate::assert_number(number_not_literate_males,  add = assertions)
+  checkmate::assert_number(number_not_literate_females,  add = assertions)
+  checkmate::assert_character(name_of_region,  add = assertions)
 
   # Report any assertions
-  assertions::reportAssertions(assertions)
+  checkmate::reportAssertions(assertions)
 
   df <- data.frame(
     Region_Name = c(name_of_region),
@@ -89,9 +89,7 @@ new_literacy_data <- function(name_of_region = "Ashanti",
     number_not_literate_females
 
   # Add assertion to check for equality
-  assertions::assert_true(
-    expr = all(df$Population_literacy == df$Population_gender),
-    msg = "Population_literacy should be equal to Population_gender",
+  checkmate::assert_true(df$Population_literacy == df$Population_gender,
     add = assertions
   )
 

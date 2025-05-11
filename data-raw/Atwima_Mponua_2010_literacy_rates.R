@@ -1,4 +1,4 @@
-## code to prepare `Atwima_Mponua-Amansie_West-Amansie_Central_2010_Literacy_data` dataset goes here
+## code to prepare `Atwima_Mponua_2010_Literacy_rates` dataset goes here
 
 #' ---
 #' date: "`r format(Sys.Date())`"
@@ -25,14 +25,16 @@
 #' https://statsghana.gov.gh/gssmain/fileUpload/Demography/16%20Regions%20and%20216%20Districts.xlsx
 
 ## Using a function in this package `rGhanaCensus`
-Atwima_Mponua_2010_literacy_rates <-create_district_literacy_df(
+Atwima_Mponua_2010_literacy_rates <-new_literacy_data(
   name_of_region = "Ashanti",
   name_of_district = "Atwima Mponua",
   census_year = 2010,
   total_literate_population = 56068,
   total_not_literate_population = 23306,
   number_literate_males = 31502,
-  number_literate_females = 24566
+  number_literate_females = 24566,
+  number_not_literate_males = 9211,
+  number_not_literate_females = 14095
 )
 
 
