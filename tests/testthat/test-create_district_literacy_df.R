@@ -1,5 +1,6 @@
 test_that("create_district_literacy_df works correctly with test data", {
-  test_data <- readRDS(test_path("data-for-testing", "two_districts_literacy_data_example.rds"))
+  test_data <- readRDS(test_path("data-for-testing",
+                                 "two_districts_literacy_data_example.rds"))
 
   # Test for Kumasi Metropolitan
   kumasi_data <- create_district_literacy_df(
@@ -9,11 +10,14 @@ test_that("create_district_literacy_df works correctly with test data", {
     total_literate_population = 800000,
     total_not_literate_population = 200000,
     number_literate_males = 450000,
-    number_literate_females = 350000
+    number_literate_females = 350000,
+    number_not_literate_males = 100000,
+    number_not_literate_females = 100000
   )
 
+  # [check] should each expect equal be in its own test_that()??
   expect_equal(nrow(kumasi_data), 3)
-  expect_equal(ncol(kumasi_data), 10)
+  expect_equal(ncol(kumasi_data), 11)
   expect_equal(kumasi_data$Region_Name, c("Ashanti", "Ashanti", "Ashanti"))
   expect_equal(kumasi_data$District_Name, c("Kumasi Metropolitan",
                                             "Kumasi Metropolitan",
@@ -21,8 +25,11 @@ test_that("create_district_literacy_df works correctly with test data", {
 
   expect_equal(kumasi_data$Literate_Population, test_data$Literate_Population[1:3])
   expect_equal(kumasi_data$Not_Literate_Population, test_data$Not_Literate_Population[1:3])
-  expect_equal(kumasi_data$Population, test_data$Population[1:3])
+  expect_equal(kumasi_data$Population_literacy, test_data$Population_literacy[1:3])
   expect_equal(kumasi_data$District_Name, as.character(test_data$District_Name[1:3]))
+
+  expect_equal(kumasi_data$Population_literacy, kumasi_data$Population_gender,
+               info = "test that the total_population_literacy is equal to total_population_gender")
 
   # Test for Obuasi Municipal
   obuasi_data <- create_district_literacy_df(
@@ -31,11 +38,13 @@ test_that("create_district_literacy_df works correctly with test data", {
     total_literate_population = 150000,
     total_not_literate_population = 50000,
     number_literate_males = 80000,
-    number_literate_females = 70000
+    number_literate_females = 70000,
+    number_not_literate_males = 25000,
+    number_not_literate_females = 25000
   )
 
   expect_equal(nrow(obuasi_data), 3)
-  expect_equal(ncol(obuasi_data), 10)
+  expect_equal(ncol(obuasi_data), 11)
   expect_equal(obuasi_data$Region_Name, c("Ashanti", "Ashanti", "Ashanti"))
   expect_equal(obuasi_data$District_Name, c("Obuasi Municipal",
                                             "Obuasi Municipal",
@@ -43,7 +52,12 @@ test_that("create_district_literacy_df works correctly with test data", {
 
   expect_equal(obuasi_data$Literate_Population, test_data$Literate_Population[4:6])
   expect_equal(obuasi_data$Not_Literate_Population, test_data$Not_Literate_Population[4:6])
-  expect_equal(obuasi_data$Population, test_data$Population[4:6])
+  expect_equal(obuasi_data$Population_literacy, test_data$Population_literacy[4:6])
   expect_equal(obuasi_data$District_Name, as.character(test_data$District_Name[4:6]))
+
+  expect_equal(obuasi_data$Population_literacy, obuasi_data$Population_gender,
+               info = "test that the total_population_literacy is equal to total_population_gender")
 })
+
+
 

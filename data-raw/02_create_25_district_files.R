@@ -20,7 +20,7 @@
 
 districts <- c(
   "Adansi North", "Bekwai Municipal", "Bosome Freho", "Asante Akim South",
-  "Asante Akim Central Municipal", "Ejisu Juaben Municipal", "Bosumtwi",
+  "Asante Akim Central Municipal", "Ejisu Juaben Municipal", "Bosumtwe",
   "Atwima Kwanwoma", "Kumasi Metropolis", "Atwima Nwabiagya", "Ahafo Ano South",
   "Ahafo Ano North", "Offinso Municipal", "Afigya Kwabre", "Kwabre East",
   "Sekyere South", "Mampong Municipal", "Sekyere East", "Sekyere Kumewu",

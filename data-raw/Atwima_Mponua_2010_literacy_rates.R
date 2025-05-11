@@ -9,8 +9,7 @@
 
 #' **Cleaning history**
 #'
-#' This script is to scrape literacy data for the following 3 districts
-#' * Atwima Mponua
+#' This script is to scrape literacy data for the Atwima Mponua district
 #'
 #' **Data Acquisition and Extraction**
 #' * 10th May 2025

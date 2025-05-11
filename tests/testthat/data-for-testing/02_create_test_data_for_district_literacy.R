@@ -9,11 +9,12 @@ two_districts_literacy_data_example <- data.frame(
   Gender = c("Total", "Male", "Female", "Total", "Male", "Female"),
   Literate_Population = as.numeric(c(800000, 450000, 350000,
                                      150000, 80000, 70000)),
-  Not_Literate_Population = as.numeric(c(200000, NA, NA, 50000, NA, NA)),
+  Not_Literate_Population = as.numeric(c(200000, 100000, 100000, 50000, 25000, 25000)),
   Literate_Percentage = as.numeric(c(NA, NA, NA, NA, NA, NA)),
   Not_Literate_Percentage = as.numeric(c(NA, NA, NA, NA, NA, NA)),
   Total_Percentage = as.numeric(c(NA, NA, NA, NA, NA, NA)),
-  Population = as.numeric(c(1000000, NA, NA, 200000, NA, NA))
+  Population_literacy = as.numeric(c(1000000, NA, NA, 200000, NA, NA)),
+  Population_gender = as.numeric(c(1000000, NA, NA, 200000, NA, NA))
 )
 
 # Save test data

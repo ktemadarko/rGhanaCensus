@@ -11,7 +11,9 @@ create_district_literacy_df(
   total_literate_population,
   total_not_literate_population,
   number_literate_males,
-  number_literate_females
+  number_literate_females,
+  number_not_literate_males,
+  number_not_literate_females
 )
 }
 \arguments{
@@ -48,7 +50,9 @@ kumasi_literacy <- create_district_literacy_df(
   total_literate_population = 800000,
   total_not_literate_population = 200000,
   number_literate_males = 450000,
-  number_literate_females = 350000
+  number_literate_females = 350000,
+  number_literate_males = 100000,
+  number_literate_females = 100000
 )
 
 }
