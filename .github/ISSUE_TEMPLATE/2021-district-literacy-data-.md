@@ -12,7 +12,7 @@ assignees: ktemadarko
 
 - [ ] **Atwima Mponua**
 
-   - [ ] **Download the source pdf to the folder 30_ash_districts/2021/**
+   - [ ] **Download the source pdf to the folder 30_Ashanti_Districts/2021_Ghana_Census/**
 
    - [ ] **Scrape and paste the literacy data in to district file in the folder data-raw/**
         - [ ] Run the district file in the folder data-raw/ to create the dataset.
