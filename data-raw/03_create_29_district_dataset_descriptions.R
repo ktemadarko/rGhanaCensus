@@ -10,7 +10,7 @@ districts <- c(
   "Asante Akim South",
   "Asante Akim Central Municipal",
   "Ejisu Juaben Municipal",
-  "Bosumtwi",
+  "Bosomtwe",
   "Atwima Kwanwoma",
   "Kumasi Metropolis",
   "Atwima Nwabiagya",
