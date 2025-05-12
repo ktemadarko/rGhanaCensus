@@ -24,7 +24,7 @@
 #' \itemize{
 #' \item{Data manually copied on : 12th May, 2025}{The 2010 Population and Housing Census District Analytical Report for the Amansie Central District published by the Ghana Statistical Service in 2014}
 #' }
-#' \url{https://www2.statsghana.gov.gh/docfiles/2010_District_Report/Ashanti/ATWIMA%20MPONUA.pdf}
+#' \url{https://www2.statsghana.gov.gh/docfiles/2010_District_Report/Ashanti/AMANSIE%20CENTRAL.pdf}
 
 
 "Amansie_Central_2010_literacy_rates"
