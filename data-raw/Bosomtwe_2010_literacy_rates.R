@@ -29,4 +29,5 @@ Bosomtwe_2010_literacy_rates <- new_literacy_data(
 )
 
 usethis::use_data(Bosomtwe_2010_literacy_rates, overwrite = TRUE)
-devtools::session_info()
+
+sessioninfo::session_info()

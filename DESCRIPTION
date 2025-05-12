@@ -1,6 +1,6 @@
 Package: rGhanaCensus
 Title: 2021 Ghana Population and Housing Census Results as Data Frames
-Version: 0.1.1
+Version: 0.1.0
 Authors@R: 
     person(given="Ama", family="Owusu-Darko", 
     email = "aowusuda@asu.edu", role = c("cre","aut"))
