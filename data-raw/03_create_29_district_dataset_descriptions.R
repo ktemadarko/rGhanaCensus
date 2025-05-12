@@ -70,9 +70,10 @@ for (district in districts) {
     "\"", gsub(" ", "_", district), "_2010_literacy_rates\""
   )
 
-  # Use usethis::use_r to create the file and write the content
-  usethis::use_r(name = file_name)
-  writeLines(documentation, con = file_path)
+  #Using use_r() did not write the content in the lines just opens 29 documents
+  #in the viewer and which was not the end goal.
+
+  writeLines(documentation, file_path)
 
   cat(paste0("Created file: ", file_path, "\n"))
 }
