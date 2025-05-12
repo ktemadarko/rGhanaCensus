@@ -3,7 +3,7 @@ name: '2021 District Literacy data '
 about: Checklist when creating a new district literacy dataset from scraped 2021 census
   data
 title: District Literacy Dataset (2021 census)
-labels: literacy dataset
+labels: 2021, literacy dataset
 assignees: ktemadarko
 
 ---
