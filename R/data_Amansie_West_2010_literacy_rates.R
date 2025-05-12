@@ -22,9 +22,9 @@
 #'
 #' @source
 #' \itemize{
-#' \item{The 2010 Population and Housing Census District Analytical Report for the Amansie West District published by the Ghana Statistical Service in 2014}
+#' \item{Data manually copied on : 12th May, 2025}{The 2010 Population and Housing Census District Analytical Report for the Amansie West District published by the Ghana Statistical Service in 2014}
 #' }
-#' \url{https://www2.statsghana.gov.gh/docfiles/2010_District_Report/Ashanti/ATWIMA%20MPONUA.pdf}
+#' \url{https://www2.statsghana.gov.gh/docfiles/2010_District_Report/Ashanti/AMANSIE%20WEST.pdf}
 
 
 "Amansie_West_2010_literacy_rates"
