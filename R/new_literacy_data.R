@@ -79,12 +79,11 @@ new_literacy_data <- function(name_of_region = "Ashanti",
     Total_Percentage = as.numeric(NA)
   )
 
-  target_index <- which(df$District_Name == name_of_district & df$Census_Year == census_year & df$Gender == "Total")
 
-  df$Population_literacy[target_index] <- total_literate_population +
+  df$Population_literacy <- total_literate_population +
     total_not_literate_population
 
-  df$Population_gender[target_index] <- number_literate_males +
+  df$Population_gender <- number_literate_males +
     number_not_literate_males + number_literate_females +
     number_not_literate_females
 
@@ -98,4 +97,22 @@ new_literacy_data <- function(name_of_region = "Ashanti",
     list(data = df),
     class = "literacy_dataframe"
   )
+}
+
+#' Print method for literacy_data objects
+#'
+#' Custom print method for objects of class "literacy_data".  Provides a
+#' more readable output.
+#'
+#' @param x An object of class "literacy_data".
+#' @param ...  Further arguments passed to or from other methods.
+#'
+#' @return The input object `x` (invisibly).
+#'
+#' @export
+print.literacy_data <- function(x, ...) {
+  cat("Literacy Data Object\n")
+  cat("---------------------\n")
+  print(x$data, ...) # print the stored data frame
+  invisible(x)
 }
