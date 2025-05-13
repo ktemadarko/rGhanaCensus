@@ -5,7 +5,7 @@
 #' collected from the Adansi South district during the 2010 Ghana Population and
 #' Housing Census.
 #'
-#' @format A data frame with 3 rows and 11 variables:
+#' @format A data frame with 3 rows and 10 variables:
 #' \describe{
 #' \item{Region_Name}{A factor with 1 level which is Ashanti.}
 #' \item{District_Name}{A factor with 1 level which is Adansi South. }
@@ -15,8 +15,7 @@
 #' \item{Literate_Population}{An integer representing the number of literate individuals in the district and gender group.}
 #' \item{Not_Literate_Percentage}{A numeric value representing the percentage of the not literate population in the district and gender group.}
 #' \item{Not_Literate_Population}{An integer representing the number of not literate individuals in the district and gender group.}
-#' \item{Population_literacy}{An integer representing the total population in the district, total of literacy values scraped}
-#' \item{Population_gender}{An integer representing the total population in the district, total of gender values scraped}
+#' \item{Total_Population}{An integer representing the total population in the district, total of literacy values scraped}
 #' \item{Total_Percentage}{A numeric value representing the sum of the literate and not literate percentages for the district and gender group.}
 #' }
 #'
