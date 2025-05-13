@@ -12,6 +12,9 @@ Asante_Akim_Central_Municipal_2010_literacy_rates <- new_literacy_data(
   name_of_district = "Asante Akim Central Municipal",
   census_year = 2010,
 
+  total_not_literate_population = ,
+  total_literate_population = 58949,
+
   number_not_literate_males = 31502,
   number_literate_males = 31502,
 
