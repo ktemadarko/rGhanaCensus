@@ -17,19 +17,17 @@
 #'   Literate_Population = c(150, 200, 180),
 #'   Not_Literate_Population = c(50, 100, 20)
 #' )
-#' literacy_data$Population = literacy_data$Literate_Population +
-#' literacy_data$Not_Literate_Population
+#' literacy_data$Population <- literacy_data$Literate_Population +
+#'   literacy_data$Not_Literate_Population
 #' # Calculate literacy percentages
 #' result_df <- calculate_literacy_percentages(literacy_data)
 #'
 #' @export
 calculate_literacy_percentages <- function(df) {
-  df$Literate_Percentage <- (df$Literate_Population / df$Population_literacy) * 100
-
-  df$Not_Literate_Percentage <- (df$Not_Literate_Population / df$Population_literacy) * 100
+  df$Literate_Percentage <- ifelse(df$Population_literacy > 0, (df$Literate_Population / df$Total_Population) * 100, 0)
+  df$Not_Literate_Percentage <- ifelse(df$Population_literacy > 0, (df$Not_Literate_Population / df$Total_Population) * 100, 0)
 
   df$Total_Percentage <-
     df$Literate_Percentage + df$Not_Literate_Percentage
 
-  return(df)
 }

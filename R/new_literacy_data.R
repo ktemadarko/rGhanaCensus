@@ -45,20 +45,19 @@ new_literacy_data <- function(name_of_region = "Ashanti",
                               number_literate_females,
                               number_not_literate_males,
                               number_not_literate_females) {
-
   # Create an assertion collection
   assertions <- checkmate::makeAssertCollection()
 
   # Input validation using assert_ functions
-  checkmate::assert_character(name_of_district,  add = assertions)
-  checkmate::assert_number(census_year,  add = assertions)
-  checkmate::assert_number(total_literate_population,  add = assertions)
-  checkmate::assert_number(total_not_literate_population,  add = assertions)
-  checkmate::assert_number(number_literate_males,  add = assertions)
-  checkmate::assert_number(number_literate_females,  add = assertions)
-  checkmate::assert_number(number_not_literate_males,  add = assertions)
-  checkmate::assert_number(number_not_literate_females,  add = assertions)
-  checkmate::assert_character(name_of_region,  add = assertions)
+  checkmate::assert_character(name_of_district, add = assertions)
+  checkmate::assert_number(census_year, add = assertions)
+  checkmate::assert_number(total_literate_population, add = assertions)
+  checkmate::assert_number(total_not_literate_population, add = assertions)
+  checkmate::assert_number(number_literate_males, add = assertions)
+  checkmate::assert_number(number_literate_females, add = assertions)
+  checkmate::assert_number(number_not_literate_males, add = assertions)
+  checkmate::assert_number(number_not_literate_females, add = assertions)
+  checkmate::assert_character(name_of_region, add = assertions)
 
   # Report any assertions
   checkmate::reportAssertions(assertions)
@@ -67,30 +66,70 @@ new_literacy_data <- function(name_of_region = "Ashanti",
     Region_Name = c(name_of_region),
     District_Name = rep(name_of_district, times = 3),
     Census_Year = rep(census_year, times = 3),
-    Population_literacy = as.numeric(NA),
-    Population_gender = as.numeric(NA),
+
     Gender = c("Total", "Male", "Female"),
-    Literate_Population = c(total_literate_population, number_literate_males,
-                            number_literate_females),
-    Not_Literate_Population = c(total_not_literate_population, number_not_literate_males,
-                                number_not_literate_females),
-    Literate_Percentage = as.numeric(NA),
-    Not_Literate_Percentage = as.numeric(NA),
-    Total_Percentage = as.numeric(NA)
+    df$Total_Population <- as.numeric(NA),
+
+    Literate_Population = c(
+      total_literate_population, number_literate_males,
+      number_literate_females
+    ),
+    Not_Literate_Population = c(
+      total_not_literate_population, number_not_literate_males,
+      number_not_literate_females
+    )
   )
 
+  # Fill in values for df$Total_population
+  df$Total_Population <- Literate_Population + Not_Literate_Population
 
-  df$Population_literacy <- total_literate_population +
-    total_not_literate_population
+  # Calculate literacy percentages
+  df <- calculate_literacy_percentages(df)
 
-  df$Population_gender <- number_literate_males +
-    number_not_literate_males + number_literate_females +
-    number_not_literate_females
-
-  # Add assertion to check for equality
-  checkmate::assert_true(df$Population_literacy == df$Population_gender,
+  # Add assertion for equality of total population values
+  checkmate::assert_true(
+    sum(number_literate_males ,
+          number_not_literate_males , number_literate_females,
+          number_not_literate_females) ==
+    sum(total_literate_population, total_not_literate_population),
     add = assertions
   )
+
+  # Assert that that there are no missing values in the final dataframe
+  all(sapply(df, checkmate::allMissing))
+
+  # Assert that all percentages add up to 100%
+  checkmate::assert_true( df$Total_percentage[df$Gender == "Total"],100,
+    add = assertions
+  )
+
+  checkmate::assert_true( sum(df$Total_percentage[df$Gender == "Male"],
+                              df$Total_percentage[df$Gender == "Female"]),100,
+                          add = assertions
+  )
+
+  #Assert total percentage of males
+  checkmate::assert_true( df$Total_percentage[df$Gender == "Male"],
+                            (sum(number_literate_males ,
+                                number_not_literate_males)/
+                               sum(total_literate_population,
+                                   total_not_literate_population))*100,
+                          add = assertions
+  )
+
+  #Assert total percentage of females
+  checkmate::assert_true( df$Total_percentage[df$Gender == "Female"],
+                          (sum(number_literate_females ,
+                               number_not_literate_females)/
+                             sum(total_literate_population,
+                                 total_not_literate_population))*100,
+                          add = assertions
+  )
+
+  # Calculate percentages
+  df$Literate_Percentage <- ifelse(df$Population_literacy > 0, (df$Literate_Population / df$Total_Population) * 100, 0)
+  df$Not_Literate_Percentage <- ifelse(df$Population_literacy > 0, (df$Not_Literate_Population / df$Total_Population) * 100, 0)
+  df$Total_Percentage <- df$Literate_Percentage + df$Not_Literate_Percentage
 
   # Create the S3 object
   structure(

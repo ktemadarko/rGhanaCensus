@@ -9,7 +9,7 @@
 #' range of survey respondents in this is dataset 11 years and above.See the
 #' Source section for references.
 #'
-#' @format A data frame with 180 rows and 11 variables:
+#' @format A data frame with 180 rows and 10 variables:
 #' \describe{
 #'    \item{Region_Name}{A factor with 1 level which is Ashanti.}
 #'    \item{District_Name}{A factor with 30 levels with the names of the districts in the Ashanti region.}
@@ -19,8 +19,7 @@
 #'    \item{Literate_Population}{An integer representing the number of literate individuals in the district and gender group.}
 #'    \item{Not_Literate_Percentage}{A numeric value representing the percentage of the not literate population in the district and gender group.}
 #'    \item{Not_Literate_Population}{An integer representing the number of not literate individuals in the district and gender group.}
-#'    \item{Population_literacy}{An integer representing the total population in the district, total of literacy values scraped}
-#'    \item{Population_gender}{An integer representing the total population in the district, total of gender values scraped}
+#'    \item{Total_Population}{An integer representing the total population in the district}
 #'    \item{Total_Percentage}{A numeric value representing the sum of the literate and not literate percentages for the district and gender group.}
 #'    }
 #'

@@ -19,7 +19,7 @@
 #' Statistical Service downloaded on 8th May, 2025 from
 #' https://statsghana.gov.gh/gssmain/fileUpload/Demography/16%20Regions%20and%20216%20Districts.xlsx
 
-#+ warning=FALSE
+
 Ashanti_30_districts_literacy_percentages <- data.frame(
   Region_Name = c("Ashanti"),
   District_Name = rep(
@@ -59,8 +59,7 @@ Ashanti_30_districts_literacy_percentages <- data.frame(
   ),
   Census_Year = rep(c(2010, 2021), each = 3, times = 30),
   Gender = rep(c("Total", "Male", "Female"), times = 60),
-  Population_literacy = as.numeric(NA),
-  Population_gender = as.numeric(NA),
+  Total_Population = as.numeric(NA),
   Literate_Population = as.numeric(NA),
   Not_Literate_Population = as.numeric(NA),
   Literate_Percentage = as.numeric(NA),
