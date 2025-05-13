@@ -98,38 +98,39 @@ new_literacy_data <- function(name_of_region = "Ashanti",
   # Assert that that there are no missing values in the final dataframe
   all(sapply(df, checkmate::allMissing))
 
+
+  # Calculate percentages
+  df <- calculate_literacy_percentages(df)
+
   # Assert that all percentages add up to 100%
-  checkmate::assert_true( df$Total_percentage[df$Gender == "Total"],100,
+  checkmate::assert_true( df$Total_Percentage[df$Gender == "Total"]=100,
     add = assertions
   )
 
   checkmate::assert_true( sum(df$Total_percentage[df$Gender == "Male"],
-                              df$Total_percentage[df$Gender == "Female"]),100,
+                              df$Total_percentage[df$Gender == "Female"]) =100,
                           add = assertions
   )
 
-  #Assert total percentage of males
-  checkmate::assert_true( df$Total_percentage[df$Gender == "Male"],
-                            (sum(number_literate_males ,
-                                number_not_literate_males)/
-                               sum(total_literate_population,
-                                   total_not_literate_population))*100,
+  # Assert total population of males
+  checkmate::assert_true(df$Total_Population[df$Gender == "Male"] ==
+                            sum(number_literate_males , number_not_literate_males),
                           add = assertions
   )
 
-  #Assert total percentage of females
-  checkmate::assert_true( df$Total_percentage[df$Gender == "Female"],
-                          (sum(number_literate_females ,
-                               number_not_literate_females)/
-                             sum(total_literate_population,
-                                 total_not_literate_population))*100,
+  # Assert total population of females
+  checkmate::assert_true( df$Total_percentage[df$Gender == "Female"] ==
+                          sum(number_literate_females ,number_not_literate_females),
                           add = assertions
   )
 
-  # Calculate percentages
-  df$Literate_Percentage <- ifelse(df$Population_literacy > 0, (df$Literate_Population / df$Total_Population) * 100, 0)
-  df$Not_Literate_Percentage <- ifelse(df$Population_literacy > 0, (df$Not_Literate_Population / df$Total_Population) * 100, 0)
-  df$Total_Percentage <- df$Literate_Percentage + df$Not_Literate_Percentage
+  # Assert total literate population
+  checkmate::assert_true(total_literate_population = number_literate_males +
+                           number_literate_females)
+
+  # Assert total not literate population
+  checkmate::assert_true(total_not_literate_population = number_not_literate_males +
+                           number_not_literate_females)
 
   # Create the S3 object
   structure(
