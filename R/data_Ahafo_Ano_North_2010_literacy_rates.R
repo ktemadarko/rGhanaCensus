@@ -23,7 +23,7 @@
 #' \itemize{
 #' \item{Data manually copied on : 13th May, 2025}{The 2010 Population and Housing Census District Analytical Report for the Ahafo Ano North District published by the Ghana Statistical Service in 2014}
 #' }
-#' \url{https://www2.statsghana.gov.gh/docfiles/2010_District_Report/Ashanti/ATWIMA%20MPONUA.pdf}
+#' \url{https://www2.statsghana.gov.gh/docfiles/2010_District_Report/Ashanti/AHAFO%20ANO%20NORTH.pdf}
 
 
 "Ahafo_Ano_North_2010_literacy_rates"
