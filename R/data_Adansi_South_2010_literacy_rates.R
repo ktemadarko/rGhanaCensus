@@ -22,9 +22,9 @@
 #'
 #' @source
 #' \itemize{
-#' \item{Data manually copied on : 12th May, 2025}{The 2010 Population and Housing Census District Analytical Report for the Adansi South District published by the Ghana Statistical Service in 2014}
+#' \item{Data manually copied on : 13th May, 2025}{The 2010 Population and Housing Census District Analytical Report for the Adansi South District published by the Ghana Statistical Service in 2014}
 #' }
-#' \url{https://www2.statsghana.gov.gh/docfiles/2010_District_Report/Ashanti/ATWIMA%20MPONUA.pdf}
+#' \url{https://www2.statsghana.gov.gh/docfiles/2010_District_Report/Ashanti/ADANSI%20SOUTH.pdf}
 
 
 "Adansi_South_2010_literacy_rates"
