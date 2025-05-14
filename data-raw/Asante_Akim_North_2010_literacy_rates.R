@@ -7,7 +7,7 @@
 #'     keep_md: TRUE
 #' ---
 ## Using a function in this package `rGhanaCensus`
-Asante_Akim_North_2010_literacy_rates <- create_district_literacy_df(
+Asante_Akim_North_2010_literacy_rates <- new_literacy_data(
   name_of_region = "Ashanti",
   name_of_district = "Asante Akim North",
   census_year = 2010,
