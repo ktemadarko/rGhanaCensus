@@ -23,7 +23,7 @@
 #' \itemize{
 #' \item{Data manually copied on : 14th May, 2025}{The 2010 Population and Housing Census District Analytical Report for the Asante Akim Central Municipal District published by the Ghana Statistical Service in 2014}
 #' }
-#' \url{https://www2.statsghana.gov.gh/docfiles/2010_District_Report/Ashanti/ATWIMA%20MPONUA.pdf}
+#' \url{https://www2.statsghana.gov.gh/docfiles/2010_District_Report/Ashanti/ASHANTI%20AKIM%20CENTRAL.pdf}
 
 
 "Asante_Akim_Central_Municipal_2010_literacy_rates"

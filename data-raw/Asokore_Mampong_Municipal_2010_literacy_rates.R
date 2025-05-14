@@ -11,14 +11,14 @@ Asokore_Mampong_Municipal_2010_literacy_rates <- new_literacy_data(
   name_of_region = "Ashanti",
   name_of_district = "Asokore Mampong Municipal",
   census_year = 2010,
-  total_literate_population = 56068,
-  total_not_literate_population = 23306,
+  total_literate_population = 173151,
+  total_not_literate_population = 50815,
 
-  number_not_literate_males = 31502,
-  number_literate_males = 31502,
+  number_not_literate_males = 15953,
+  number_literate_males = 88970,
 
-  number_not_literate_females = 31502,
-  number_literate_females = 24566
+  number_not_literate_females = 34862,
+  number_literate_females = 84181
 )
 
 usethis::use_data(Asokore_Mampong_Municipal_2010_literacy_rates, overwrite = TRUE)
