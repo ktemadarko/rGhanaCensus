@@ -12,14 +12,14 @@ Asante_Akim_North_2010_literacy_rates <- create_district_literacy_df(
   name_of_district = "Asante Akim North",
   census_year = 2010,
 
-  total_not_literate_population = ,
-  total_literate_population = 58949,
+  total_not_literate_population = 10003,
+  total_literate_population = 38098,
 
-  number_not_literate_males = 31502,
-  number_literate_males = 31502,
+  number_not_literate_males = 3535,
+  number_literate_males = 19300,
 
-  number_not_literate_females = 31502,
-  number_literate_females = 24566
+  number_not_literate_females = 6468,
+  number_literate_females = 18798
 )
 
 usethis::use_data(Asante_Akim_North_2010_literacy_rates, overwrite = TRUE)
