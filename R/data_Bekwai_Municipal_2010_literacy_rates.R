@@ -2,8 +2,8 @@
 #'
 #' @description The `Bekwai_Municipal_2010_literacy_rates` dataset contains
 #' literacy percentages for respondents aged 11 years and above. This data was
-#' collected from the Bekwai Municipal district during the 2010 Ghana Population and
-#' Housing Census.
+#' collected from the Bekwai Municipal district during the 2010 Ghana Population
+#' and Housing Census.
 #'
 #' @format A data frame with 3 rows and 10 variables:
 #' \describe{
@@ -23,7 +23,7 @@
 #' \itemize{
 #' \item{Data manually copied on : 14th May, 2025}{The 2010 Population and Housing Census District Analytical Report for the Bekwai Municipal District published by the Ghana Statistical Service in 2014}
 #' }
-#' \url{https://www2.statsghana.gov.gh/docfiles/2010_District_Report/Ashanti/ATWIMA%20MPONUA.pdf}
+#' \url{https://www2.statsghana.gov.gh/docfiles/2010_District_Report/Ashanti/BEKWAI%20.pdf}
 
 
 "Bekwai_Municipal_2010_literacy_rates"

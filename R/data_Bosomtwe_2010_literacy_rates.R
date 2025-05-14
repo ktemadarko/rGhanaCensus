@@ -21,7 +21,7 @@
 #'
 #' @source
 #' \itemize{
-#' \item{Data manually copied on : 14th May, 2025}{The 2010 Population and Housing Census District Analytical Report for the Bosomtwe District published by the Ghana Statistical Service in 2014}
+#' \item{Data manually copied on : 12th May, 2025}{The 2010 Population and Housing Census District Analytical Report for the Bosomtwe District published by the Ghana Statistical Service in 2014}
 #' }
 #' \url{https://www2.statsghana.gov.gh/docfiles/2010_District_Report/Ashanti/BOSOMTWE.pdf}
 
