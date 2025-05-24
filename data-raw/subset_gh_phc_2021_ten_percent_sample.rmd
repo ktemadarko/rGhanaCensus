@@ -15,6 +15,7 @@ output: github_document
 ```{r load r packages, eval = FALSE, include = TRUE}
 library(arrow)
 library(dplyr)
+library(utils)
 ```
 
 Using the `arrow` r package to load the data into the r environment. This package is helpful when working with large data sets.
