@@ -1,4 +1,10 @@
 # rGhanaCensus
+
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/ktemadarko/rGhanaCensus/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ktemadarko/rGhanaCensus/actions/workflows/R-CMD-check.yaml)
+
+<!-- badges: end -->
+
 2021 Ghana Population and Housing Census Results as Data Frames
 
 This package contains the 2021 Ghana Population and Housing Census Results. Users can access results as 'tidyverse' and 'sf'-Ready Data Frames.
