@@ -64,7 +64,7 @@
 #'        \item{Ghana regional administrative boundaries geometry data}
 #'         \item{Downloaded from Humanitarian data exchange website on 7th January, 2022}
 #'         }
-#'         \url{https://data.humdata.org/dataset/ghana-administrative-boundaries}
+#'         \url{https://data.humdata.org:443/dataset/cod-ab-gha}
 #'
 #'
 #'

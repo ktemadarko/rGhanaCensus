@@ -4,6 +4,8 @@
 #' `inst/extdata` folder. This function make them easy to access.
 #'
 #' @param path Name of file. If `NULL`, the example files will be listed.
+#' @returns The location of the parquet folder
+#'
 #' @export
 #' @examples
 #' rGhanaCensus_parquet_format()

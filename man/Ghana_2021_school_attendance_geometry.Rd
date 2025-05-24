@@ -64,7 +64,7 @@ A data frame with 64 rows and 10 variables:
 \item{Ghana regional administrative boundaries geometry data}
 \item{Downloaded from Humanitarian data exchange website on 7th January, 2022}
 }
-\url{https://data.humdata.org/dataset/ghana-administrative-boundaries}
+\url{https://data.humdata.org:443/dataset/cod-ab-gha}
 }
 \usage{
 Ghana_2021_school_attendance_geometry

@@ -9,6 +9,9 @@ rGhanaCensus_parquet_format(path = NULL)
 \arguments{
 \item{path}{Name of file. If \code{NULL}, the example files will be listed.}
 }
+\value{
+The location of the parquet folder
+}
 \description{
 rGhanaCensus stores the ten percent sample of the 2021 Ghana Population and Housing Census data in the parquet format in its
 \code{inst/extdata} folder. This function make them easy to access.
