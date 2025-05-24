@@ -50,7 +50,7 @@ Partitioning by the variable `subdist` which represents the subdistricts
 of Ghana.
 
 ``` r
-arrow::write_dataset(dataset = subset_gh_phc_2021_ten_percent_sample1,
+arrow::write_dataset(dataset = subset_gh_phc_2021_ten_percent_sample,
                      partitioning = "subdist",
  
                     path = "~/Ama_Owusu-Darko_RCode_sample/rGhanaCensus/data/subset_gh_phc_2021_ten_percent_sample_parquet_file")
