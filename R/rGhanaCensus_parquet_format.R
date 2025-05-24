@@ -7,7 +7,7 @@
 #' @export
 #' @examples
 #' rGhanaCensus_parquet_format()
-#' rGhanaCensus_parquet_format("subset_gh_phc_2021_ten_percent_sample")
+#' rGhanaCensus_parquet_format("parquet")
 rGhanaCensus_parquet_format <- function(path = NULL) {
   if (is.null(path)) {
     dir(system.file("extdata", package = "rGhanaCensus"))
