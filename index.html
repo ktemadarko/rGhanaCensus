@@ -11,8 +11,8 @@
 <script src="deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
 <link href="deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
 <script src="deps/headroom-0.11.0/headroom.min.js"></script><script src="deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="deps/search-1.0.0/fuse.min.js"></script><script src="deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="2021 Ghana Population and Housing Census Results as Data Frames">
-<meta name="description" content="Datasets from the 2021 Ghana Population and Housing Census Results. Users can access results as tidyverse and sf-Ready Data Frames. The data in this package is scraped from pdf reports released by the Ghana Statistical Service website &lt;https://census2021.statsghana.gov.gh/&gt; . The package currently only contains datasets from the literacy and education reports. Namely, school attendance data for respondents aged 3 years and above.">
-<meta property="og:description" content="Datasets from the 2021 Ghana Population and Housing Census Results. Users can access results as tidyverse and sf-Ready Data Frames. The data in this package is scraped from pdf reports released by the Ghana Statistical Service website &lt;https://census2021.statsghana.gov.gh/&gt; . The package currently only contains datasets from the literacy and education reports. Namely, school attendance data for respondents aged 3 years and above.">
+<meta name="description" content="Datasets from the 2021 Ghana Population and Housing Census Results. Users can access results as tidyverse and sf-Ready Data Frames. The data in this package is downloaded or scraped from pdf reports released by the Ghana Statistical Service website &lt;https://census2021.statsghana.gov.gh/&gt; .">
+<meta property="og:description" content="Datasets from the 2021 Ghana Population and Housing Census Results. Users can access results as tidyverse and sf-Ready Data Frames. The data in this package is downloaded or scraped from pdf reports released by the Ghana Statistical Service website &lt;https://census2021.statsghana.gov.gh/&gt; .">
 </head>
 <body>
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
@@ -22,7 +22,7 @@
 
     <a class="navbar-brand me-2" href="index.html">rGhanaCensus</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -58,20 +58,40 @@
 <!-- badges: start -->
 
 <!-- badges: end -->
-<p>2021 Ghana Population and Housing Census Results as Data Frames</p>
+<p><strong>2021 Ghana Population and Housing Census Results as Data Frames</strong></p>
 <p>This package contains the 2021 Ghana Population and Housing Census Results. Users can access results as ‘tidyverse’ and ‘sf’-Ready Data Frames.</p>
-<p>Data available in the package as at 13th January, 2022 School attendance indicators for respondents aged 3 years or older plus Ghana regional administrative boundaries.</p>
+<div class="section level3">
+<h3 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
+</h3>
+<p>The latest release of the package can be installed through CRAN:</p>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"rGhanaCensus"</span><span class="op">)</span></span></code></pre></div>
+<p><strong>Data available in the package as at 24th May, 2025.</strong></p>
+<ul>
+<li>
+<p>Ten percent (~3 million rows out of the approximately 30 million rows) from the 2021 Ghana Population and Housing Census.</p>
+<ul>
+<li>Downloaded the source data from the <a href="https://microdata.statsghana.gov.gh/index.php/catalog/110/get-microdata" title="Ghana Statistical Service Microdata Catalog" class="external-link">Ghana Statistical Service Microdata Catalog</a>.</li>
+</ul>
+</li>
+<li><p>School attendance indicators for respondents aged 3 years or older plus Ghana regional administrative boundaries.</p></li>
+</ul>
 <p>Variables and their corresponding derived percentage columns</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a>      <span class="sc">-</span>Currently_Attending_School</span>
-<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a>      </span>
-<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>      <span class="sc">-</span>Never_Attended_School</span>
-<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a>      </span>
-<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a>      <span class="sc">-</span>Dropped_out_of_School</span>
-<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a>      </span>
-<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a>      <span class="sc">-</span><span class="fu">Sum_of_Respondents_</span>(<span class="dv">3</span>_years_and_above)</span></code></pre></div>
-<p>School attendance data is scraped from Ghana Statistical Service website. Url:<a href="https://statsghana.gov.gh/" class="external-link uri">https://statsghana.gov.gh/</a> Source: The 2021 Ghana Population and Housing Census Results Volume 3D Literacy and Education PDF Reports published on 16th December, 2021.</p>
-<p>Ghana regional administrative boundaries geometry data downloaded from Humanitarian data exchange website on 7th January, 2022} Url:<a href="https://data.humdata.org/dataset/ghana-administrative-boundaries" class="external-link uri">https://data.humdata.org/dataset/ghana-administrative-boundaries</a></p>
+<pre><code>      -Currently_Attending_School
+
+      -Never_Attended_School
+
+      -Dropped_out_of_School
+
+      -Sum_of_Respondents_(3_years_and_above)</code></pre>
+<p>School attendance data is scraped from <a href="https://statsghana.gov.gh/" title="Ghana Statistical Service website" class="external-link">Ghana Statistical Service website</a>.</p>
+<ul>
+<li>
+<strong>Source:</strong> The 2021 Ghana Population and Housing Census Results Volume 3D Literacy and Education PDF Reports published on 16th December, 2021.</li>
+</ul>
+<p>Ghana regional administrative boundaries geometry data downloaded from <a href="https://data.humdata.org:443/dataset/cod-ab-gha" title="Humanitarian data exchange website" class="external-link">Humanitarian data exchange website</a> on 7th January, 2022}</p>
 <p>Special thanks to Shelmith Kariuki (Author of rKenyaCensus) and Kyle Walker (Author of tidycensus) for the inspiration.</p>
+</div>
 </div>
   </main><aside class="col-md-3"><div class="links">
 <h2 data-toc-skip>Links</h2>
@@ -101,7 +121,7 @@
 <div class="developers">
 <h2 data-toc-skip>Developers</h2>
 <ul class="list-unstyled">
-<li>Ama Owusu-Darko <br><small class="roles"> Maintainer, author </small> <a href="https://orcid.org/0000-0002-7419-0324" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a>  </li>
+<li>Ama Owusu-Darko <br><small class="roles"> Maintainer, author, copyright holder </small> <a href="https://orcid.org/0000-0002-7419-0324" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a>  </li>
 </ul>
 </div>
 
