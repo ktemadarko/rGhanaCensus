@@ -1,36 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://ktemadarko.github.io/rGhanaCensus/404.html</loc>
-  </url>
-  <url>
-    <loc>https://ktemadarko.github.io/rGhanaCensus/LICENSE-text.html</loc>
-  </url>
-  <url>
-    <loc>https://ktemadarko.github.io/rGhanaCensus/LICENSE.html</loc>
-  </url>
-  <url>
-    <loc>https://ktemadarko.github.io/rGhanaCensus/articles/Choropleth_map_Ghana_2021_School_Attendance_Indicators.html</loc>
-  </url>
-  <url>
-    <loc>https://ktemadarko.github.io/rGhanaCensus/articles/index.html</loc>
-  </url>
-  <url>
-    <loc>https://ktemadarko.github.io/rGhanaCensus/authors.html</loc>
-  </url>
-  <url>
-    <loc>https://ktemadarko.github.io/rGhanaCensus/index.html</loc>
-  </url>
-  <url>
-    <loc>https://ktemadarko.github.io/rGhanaCensus/news/index.html</loc>
-  </url>
-  <url>
-    <loc>https://ktemadarko.github.io/rGhanaCensus/reference/Ghana_2021_school_attendance.html</loc>
-  </url>
-  <url>
-    <loc>https://ktemadarko.github.io/rGhanaCensus/reference/Ghana_2021_school_attendance_geometry.html</loc>
-  </url>
-  <url>
-    <loc>https://ktemadarko.github.io/rGhanaCensus/reference/index.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>https://ktemadarko.github.io/rGhanaCensus/404.html</loc></url>
+<url><loc>https://ktemadarko.github.io/rGhanaCensus/LICENSE-text.html</loc></url>
+<url><loc>https://ktemadarko.github.io/rGhanaCensus/LICENSE.html</loc></url>
+<url><loc>https://ktemadarko.github.io/rGhanaCensus/articles/Choropleth_map_Ghana_2021_School_Attendance_Indicators.html</loc></url>
+<url><loc>https://ktemadarko.github.io/rGhanaCensus/articles/index.html</loc></url>
+<url><loc>https://ktemadarko.github.io/rGhanaCensus/authors.html</loc></url>
+<url><loc>https://ktemadarko.github.io/rGhanaCensus/index.html</loc></url>
+<url><loc>https://ktemadarko.github.io/rGhanaCensus/news/index.html</loc></url>
+<url><loc>https://ktemadarko.github.io/rGhanaCensus/reference/Ghana_2021_school_attendance.html</loc></url>
+<url><loc>https://ktemadarko.github.io/rGhanaCensus/reference/Ghana_2021_school_attendance_geometry.html</loc></url>
+<url><loc>https://ktemadarko.github.io/rGhanaCensus/reference/index.html</loc></url>
 </urlset>
+
