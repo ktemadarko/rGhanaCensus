@@ -41,7 +41,7 @@ Due to errors saving the complete data set as a Parquet file, six columns and ro
 ```{r dropping rows and columns, eval = FALSE, include = TRUE}
 
 subset_gh_phc_2021_ten_percent_sample <-
-  phc_2021_sample[c(1:1133,1135:3049,3051:3083572),c(1:136,138:191,193:203,205:215,217, 219,221:241)]  |>
+  phc_2021_sample[,c(1:136,138:191,193:203,205:215,217, 219,221:241)]  |>
   dplyr::collect()
 ```
 
