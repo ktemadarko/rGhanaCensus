@@ -15,5 +15,5 @@ rGhanaCensus stores the ten percent sample of the 2021 Ghana Population and Hous
 }
 \examples{
 rGhanaCensus_parquet_format()
-rGhanaCensus_parquet_format("subset_gh_phc_2021_ten_percent_sample")
+rGhanaCensus_parquet_format("parquet")
 }
