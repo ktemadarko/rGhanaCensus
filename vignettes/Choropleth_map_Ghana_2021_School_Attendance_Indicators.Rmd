@@ -41,9 +41,9 @@ Convert it to `sf` data frame and assign a new name. In this example, "Ghana_edu
 Ghana_edu_sf<- sf::st_as_sf(Ghana_2021_school_attendance_geometry)
 ```
 
-The code `Ghana_edu_sf %>%filter(Locality=="Urban")` subsets the data frame and retains only the rows that the survey respondents came from Urban areas.
+The code `Ghana_edu_sf |>filter(Locality=="Urban")` subsets the data frame and retains only the rows that the survey respondents came from Urban areas.
 
-`Ghana_edu_sf %>%filter(Locality=="Rural")` can be used to retain observations from Rural areas.
+`Ghana_edu_sf |>filter(Locality=="Rural")` can be used to retain observations from Rural areas.
 
 Use `tmap_mode("view")` to create interactive map. A static map is plotted here with `tmap_mode("plot")`
 
@@ -54,8 +54,8 @@ Use `tmap_mode("view")` to create interactive map. A static map is plotted here 
 #Use tmap to create interactive map
 tmap_mode("plot")
 
-Ghana_edu_sf %>%
-      dplyr::filter(Locality=="Urban") %>%
+Ghana_edu_sf |>
+      dplyr::filter(Locality=="Urban") |>
       tm_shape()+
       tm_polygons(id="Region", col="Region",palette="YlOrRd",
                   title="Percentage of School drop-outs")+
@@ -89,8 +89,8 @@ The `convert2density` argument in the `tm_polygon` function calculates the popul
 
 tmap_mode("plot")
 
-Ghana_edu_sf %>%
-      dplyr::filter(Locality=="Urban") %>%
+Ghana_edu_sf |>
+      dplyr::filter(Locality=="Urban") |>
       tm_shape()+
       tm_polygons(id="Region",col="Dropped_out_of_School", palette = "RdPu",
                   style="kmeans", convert2density = TRUE,
