@@ -76,7 +76,7 @@ The \code{Ghana_2021_school_attendance_geometry} dataset contains  school attend
 }
 }
 \examples{
-\dontrun{
+
 
 #Example
 
@@ -98,7 +98,7 @@ data("Ghana_2021_school_attendance_geometry", package = "rGhanaCensus")
 
 Ghana_edu_sf<- sf::st_as_sf(Ghana_2021_school_attendance_geometry)
 
-
+\dontrun{
 #Use tmap to create interactive map
 tmap_mode("plot")
 
