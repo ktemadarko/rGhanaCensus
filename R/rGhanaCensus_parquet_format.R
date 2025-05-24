@@ -7,7 +7,7 @@
 #' @export
 #' @examples
 #' rGhanaCensus_parquet_format()
-#' rGhanaCensus_parquet_format("parquet")
+#' rGhanaCensus_parquet_format("arrow")
 rGhanaCensus_parquet_format <- function(path = NULL) {
   if (is.null(path)) {
     dir(system.file("extdata", package = "rGhanaCensus"))
