@@ -1,0 +1,59 @@
+Ten percent sample of 2021 Ghana Census data
+================
+
+### History
+
+- **May 2025:**
+  - Downloaded the source data from the Ghana Statistical Service
+    Microdata Catalog.
+  - url:
+    <https://microdata.statsghana.gov.gh/index.php/catalog/110/get-microdata>
+  - The data was in the csv file format, size about 4 GB.
+
+#### Load packages
+
+``` r
+library(arrow)
+library(dplyr)
+```
+
+Using the `arrow` r package to load the data into the r environment.
+This package is helpful when working with large data sets.
+
+``` r
+phc_2021_sample <- arrow::open_dataset(
+  sources = "~/path/to/data/defacto_population_20221011d.csv", 
+  format = "csv"
+ 
+)
+```
+
+#### Dropping rows and columns
+
+Due to errors saving the complete data set as a Parquet file, six
+columns and rows 1134 and 3050 were dropped.
+
+- Dropped Columns 137, 192, 204, 216, 218, 220
+
+- Creating a new data set `subset_gh_phc_201_ten_percent_sample` with
+  3,083,570 rows and 235 columns.
+
+``` r
+subset_gh_phc_2021_ten_percent_sample <-
+  phc_2021_sample[c(1:1133,1135:3049,3051:3083572),c(1:136,138:191,193:203,205:215,217, 219,221:241)]  |>
+  dplyr::collect()
+```
+
+#### Write 3 million rows csv to parquet files
+
+Partitioning by the variable `subdist` which represents the subdistricts
+of Ghana.
+
+``` r
+arrow::write_dataset(dataset = subset_gh_phc_2021_ten_percent_sample1,
+                     partitioning = "subdist",
+ 
+                    path = "~/Ama_Owusu-Darko_RCode_sample/rGhanaCensus/data/subset_gh_phc_2021_ten_percent_sample_parquet_file")
+
+#sessioninfo::session_info()
+```
