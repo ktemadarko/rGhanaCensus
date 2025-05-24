@@ -56,7 +56,13 @@ arrow::write_dataset(dataset = subset_gh_phc_2021_ten_percent_sample,
  
                     path = "~/Ama_Owusu-Darko_RCode_sample/rGhanaCensus/data/subset_gh_phc_2021_ten_percent_sample_parquet_file")
 
-sessioninfo::session_info()
-
- 
 ```
+
+#### Session info
+
+```{r session_info, eval = TRUE, include = TRUE}
+
+utils::sessionInfo()
+
+```
+

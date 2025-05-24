@@ -8,7 +8,7 @@ output: github_document
 -   **May 2025:**
     -   Downloaded the source data from the Ghana Statistical Service Microdata Catalog.
     -   url: <https://microdata.statsghana.gov.gh/index.php/catalog/110/get-microdata>
-    -   The  original data was in the csv file format, size about 4 GB.
+    -   The original data was in the csv file format, size about 4 GB.
 
 #### Load packages
 
@@ -31,17 +31,18 @@ phc_2021_sample <- arrow::open_dataset(
 
 #### Children subset
 
-Due to errors saving the complete data set as a Parquet file, six columns and rows 1134 and 3050 were dropped.
+Subsetting the data to filter and keep rows where age is less than 19.
 
--   Dropped Columns 137, 192, 204, 216, 218, 220
+-   `p02` is the age variable from the data dictionary
 
 -   Creating a new data set `subset_gh_phc_201_ten_percent_sample` with 3,083,570 rows and 235 columns.
 
 ```{r children subset, eval = FALSE, include = TRUE}
 
-subset_gh_phc_2021_ten_percent_sample <-
-  phc_2021_sample[c(1:1133,1135:3049,3051:3083572),c(1:136,138:191,193:203,205:215,217, 219,221:241)]  |>
+children_gh_phc_2021_ten_percent_sample <- phc_2021_sample[1:13,100] |> 
   dplyr::collect()
+  
+  #phc_2021_sample[c(1:1133,1135:3049,3051:3083572),c(1:136,138:191,193:203,205:215,217, 219,221:241)]  
 ```
 
 #### Write 3 million rows csv to parquet files
@@ -50,12 +51,9 @@ Partitioning by the variable `subdist` which represents the subdistricts of Ghan
 
 ```{r write data set, eval = FALSE, include = TRUE}
 
-arrow::write_dataset(dataset = subset_gh_phc_2021_ten_percent_sample,
+arrow::write_dataset(dataset = children_gh_phc_2021_ten_percent_sample,
                      partitioning = "subdist",
  
-                    path = "~/Ama_Owusu-Darko_RCode_sample/rGhanaCensus/data/subset_gh_phc_2021_ten_percent_sample_parquet_file")
+                    path = "~/Ama_Owusu-Darko_RCode_sample/rGhanaCensus/data/children_gh_phc_2021_ten_percent_sample_parquet_file")
 
-sessioninfo::session_info()
-
- 
 ```

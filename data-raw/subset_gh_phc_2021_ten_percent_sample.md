@@ -54,6 +54,36 @@ arrow::write_dataset(dataset = subset_gh_phc_2021_ten_percent_sample,
                      partitioning = "subdist",
  
                     path = "~/Ama_Owusu-Darko_RCode_sample/rGhanaCensus/data/subset_gh_phc_2021_ten_percent_sample_parquet_file")
-
-#sessioninfo::session_info()
 ```
+
+#### Session info
+
+``` r
+utils::sessionInfo()
+```
+
+    ## R version 4.5.0 (2025-04-11 ucrt)
+    ## Platform: x86_64-w64-mingw32/x64
+    ## Running under: Windows 11 x64 (build 22631)
+    ## 
+    ## Matrix products: default
+    ##   LAPACK version 3.12.1
+    ## 
+    ## locale:
+    ## [1] LC_COLLATE=English_United States.utf8 
+    ## [2] LC_CTYPE=English_United States.utf8   
+    ## [3] LC_MONETARY=English_United States.utf8
+    ## [4] LC_NUMERIC=C                          
+    ## [5] LC_TIME=English_United States.utf8    
+    ## 
+    ## time zone: Africa/Accra
+    ## tzcode source: internal
+    ## 
+    ## attached base packages:
+    ## [1] stats     graphics  grDevices utils     datasets  methods   base     
+    ## 
+    ## loaded via a namespace (and not attached):
+    ##  [1] compiler_4.5.0    fastmap_1.2.0     cli_3.6.5         tools_4.5.0      
+    ##  [5] htmltools_0.5.8.1 rstudioapi_0.17.1 yaml_2.3.10       rmarkdown_2.29   
+    ##  [9] knitr_1.50        xfun_0.52         digest_0.6.37     rlang_1.1.6      
+    ## [13] evaluate_1.0.3
