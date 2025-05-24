@@ -1,5 +1,5 @@
 ---
-title: "Ten percent sample of 2021 Ghana Census data"
+title: "Children subset of Ten percent sample of 2021 Ghana Census data"
 output: github_document
 ---
 
@@ -8,7 +8,7 @@ output: github_document
 -   **May 2025:**
     -   Downloaded the source data from the Ghana Statistical Service Microdata Catalog.
     -   url: <https://microdata.statsghana.gov.gh/index.php/catalog/110/get-microdata>
-    -   The data was in the csv file format, size about 4 GB.
+    -   The  original data was in the csv file format, size about 4 GB.
 
 #### Load packages
 
@@ -21,7 +21,6 @@ Using the `arrow` r package to load the data into the r environment. This packag
 
 ```{r create arrow connection, eval = FALSE, include = TRUE}
 
- 
 phc_2021_sample <- arrow::open_dataset(
   sources = "~/path/to/data/defacto_population_20221011d.csv", 
   format = "csv"
@@ -30,7 +29,7 @@ phc_2021_sample <- arrow::open_dataset(
 
 ```
 
-#### Dropping rows and columns
+#### Children subset
 
 Due to errors saving the complete data set as a Parquet file, six columns and rows 1134 and 3050 were dropped.
 
@@ -38,7 +37,7 @@ Due to errors saving the complete data set as a Parquet file, six columns and ro
 
 -   Creating a new data set `subset_gh_phc_201_ten_percent_sample` with 3,083,570 rows and 235 columns.
 
-```{r dropping rows and columns, eval = FALSE, include = TRUE}
+```{r children subset, eval = FALSE, include = TRUE}
 
 subset_gh_phc_2021_ten_percent_sample <-
   phc_2021_sample[c(1:1133,1135:3049,3051:3083572),c(1:136,138:191,193:203,205:215,217, 219,221:241)]  |>
