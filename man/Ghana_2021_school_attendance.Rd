@@ -70,9 +70,9 @@ A data frame with 64 rows and 10 variables:
 Ghana_2021_school_attendance
 }
 \description{
-The \code{Ghana_2021_school_attendance} dataset contains  school attendance indicators for respondents in the 16 regions of Ghana surveyed in the 2021 Ghana Population and Housing Census.
-\itemize{
-\item{ Details} {-Age range of survey respondents in this data set 3 years and above.}
-}
+The \code{Ghana_2021_school_attendance} dataset contains school
+attendance indicators for respondents in the 16 regions of Ghana surveyed in
+the 2021 Ghana Population and Housing Census.
+The age range of survey respondents in this data set 3 years and above.
 }
 \keyword{datasets}
