@@ -1,6 +1,7 @@
 # rGhanaCensus
 
 <!-- badges: start -->
+[![CRAN status](https://www.r-pkg.org/badges/version/rGhanaCensus)](https://CRAN.R-project.org/package=rGhanaCensus)
 [![R-CMD-check](https://github.com/ktemadarko/rGhanaCensus/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ktemadarko/rGhanaCensus/actions/workflows/R-CMD-check.yaml)
 
 <!-- badges: end -->
