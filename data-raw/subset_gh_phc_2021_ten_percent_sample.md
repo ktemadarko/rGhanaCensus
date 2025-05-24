@@ -31,16 +31,16 @@ phc_2021_sample <- arrow::open_dataset(
 #### Dropping rows and columns
 
 Due to errors saving the complete data set as a Parquet file, six
-columns and rows 1134 and 3050 were dropped.
+columns were dropped.
 
 - Dropped Columns 137, 192, 204, 216, 218, 220
 
 - Creating a new data set `subset_gh_phc_201_ten_percent_sample` with
-  3,083,570 rows and 235 columns.
+  3,083,572 rows and 235 columns.
 
 ``` r
 subset_gh_phc_2021_ten_percent_sample <-
-  phc_2021_sample[c(1:1133,1135:3049,3051:3083572),c(1:136,138:191,193:203,205:215,217, 219,221:241)]  |>
+  phc_2021_sample[,c(1:136,138:191,193:203,205:215,217, 219,221:241)]  |>
   dplyr::collect()
 ```
 
@@ -53,7 +53,7 @@ of Ghana.
 arrow::write_dataset(dataset = subset_gh_phc_2021_ten_percent_sample,
                      partitioning = "subdist",
  
-                    path = "~/Ama_Owusu-Darko_RCode_sample/rGhanaCensus/data/subset_gh_phc_2021_ten_percent_sample_parquet_file")
+                    path = "~/path/to/data/subset_gh_phc_2021_ten_percent_sample_parquet_file")
 ```
 
 #### Session info
