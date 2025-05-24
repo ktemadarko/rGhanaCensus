@@ -3,7 +3,7 @@
 #' @description The Ghana Statistical Service conducted the 2021 Population and
 #' Housing Census (2021 PHC) on 27th June, 2021.
 #'
-#' Data on household members and visitors who spent the Census Night in the
+#' Record of household members and visitors who spent the Census Night in the
 #' dwelling of the household, homeless households, stable, unstable and floating
 #' population.
 #'
