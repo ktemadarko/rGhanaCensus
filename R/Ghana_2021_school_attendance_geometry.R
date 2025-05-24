@@ -1,10 +1,12 @@
 #' @title Ghana School Attendance Indicator data plus geometry
 #'
-#' @description The \code{Ghana_2021_school_attendance_geometry} dataset contains  school attendance indicators for respondents in the 16 regions of Ghana surveyed in the 2021 Ghana Population and Housing Census plus Ghana regional administrative boundaries.
-#'         \itemize{
-#'                    \item{ Details} {Age range of survey respondents in this data set 3 years and above.}
-#'       }
-#
+#' @description The \code{Ghana_2021_school_attendance_geometry} dataset contains
+#'  attendance indicators for respondents in the 16 regions of Ghana surveyed in
+#'  the 2021 Ghana Population and Housing Census plus Ghana regional administrative
+#'  boundaries.
+#'  The age range of survey respondents in this data set 3 years and above.
+#'
+#'
 #' @format A data frame with 64 rows and 10 variables:
 #' \itemize{
 #'         \item{Region}
