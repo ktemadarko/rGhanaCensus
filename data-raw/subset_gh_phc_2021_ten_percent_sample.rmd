@@ -22,7 +22,7 @@ Using the `arrow` r package to load the data into the r environment. This packag
 
 ```{r create arrow connection, eval = FALSE, include = TRUE}
 
-phc_2021_sample <- arrow::open_dataset(
+phc_2021_sample_pq <- arrow::open_dataset(
   sources = "~/path/to/data/defacto_population_20221011d.csv", 
   format = "csv"
 )
@@ -40,7 +40,7 @@ Due to errors saving the complete data set as a Parquet file, six columns were d
 ```{r dropping rows and columns, eval = FALSE, include = TRUE}
 
 subset_gh_phc_2021_ten_percent_sample <-
-  phc_2021_sample[,c(1:136, 138:191, 193:203, 205:215, 217, 219, 221:241)]  |>
+  phc_2021_sample_pq[,c(1:136, 138:191, 193:203, 205:215, 217, 219, 221:241)]  |>
   dplyr::collect()
 ```
 

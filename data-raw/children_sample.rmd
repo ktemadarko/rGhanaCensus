@@ -1,0 +1,76 @@
+---
+title: "Children subset of Ten percent sample of 2021 Ghana Census data"
+output: github_document
+---
+
+### History
+
+-   **May 2025:**
+    -   Downloaded the source data from the Ghana Statistical Service Microdata Catalog.
+    -   url: <https://microdata.statsghana.gov.gh/index.php/catalog/110/get-microdata>
+    -   The original data was in the csv file format, size about 4 GB.
+
+#### Load packages
+
+```{r load r packages, eval = FALSE, include = TRUE}
+
+library(arrow)
+library(dplyr)
+library(usethis)
+library(utils)
+```
+
+Using the `arrow` r package to load the data into the r environment. This package is helpful when working with large data sets.
+
+```{r create arrow connection, eval = FALSE, include = TRUE}
+
+phc_2021_sample <- arrow::open_dataset(
+  sources = "~/path/to/data/defacto_population_20221011d.csv", 
+  format = "csv"
+)
+
+```
+
+#### Children of the Family head who are less than 19 subset
+
+Subsetting the data to filter and keep rows where age is less than 19 and are the direct children of the family head.
+
+-   **Exclusions:**
+
+    -   Grandchildren living in the household are excluded.
+
+    -   Adult children of the family head are excluded.
+
+-   `p02` is the ***age variable*** from the data dictionary
+
+-   `a11c` is the ***Relationship to family head variable*** from the data dictionary
+
+-   Due to errors when loading the full dataset, six columns were dropped.
+
+    -   Dropped Columns 137, 192, 204, 216, 218, 220
+
+-   Creating a new data set `children_sample` with 1,356,851 rows and 235 columns.
+
+```{r children subset, eval = FALSE, include = TRUE}
+
+children_sample <- phc_2021_sample_pq[,c(1:136, 138:191, 193:203, 205:215, 217, 219, 221:241)] |> 
+  dplyr::filter(p02 < 19 & a11c == "Child (Son/Daughter)") |> 
+  dplyr::collect()
+
+```
+
+#### Write `children_sample` to rda file
+
+```{r save rda, eval = FALSE, include = TRUE}
+
+usethis::use_data(children_sample, overwrite = TRUE)
+
+
+```
+
+#### Session info
+
+```{r session_info, eval = TRUE, include = TRUE}
+
+utils::sessionInfo()
+```
