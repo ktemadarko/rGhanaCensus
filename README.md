@@ -15,7 +15,7 @@ This package contains the 2021 Ghana Population and Housing Census Results. User
 The latest release of the package can be installed from Github:
 
 ```r
-pak::pkg_install("ktemadarko/rGhanaCensus")
+pak::pak("ktemadarko/rGhanaCensus")
 ```
 **Data available in the package as at 24th May, 2025.**
 
